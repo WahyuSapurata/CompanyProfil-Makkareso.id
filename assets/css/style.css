@@ -320,7 +320,7 @@ body {
   font-size: 16px !important;
   font-weight: 700 !important;
   font-family: "Montserrat", sans-serif !important;
-  color: #505050 !important;
+  color: #505050;
   position: relative;
 }
 .btn-style-right:hover:before,
@@ -349,6 +349,7 @@ body {
 .bizagn--owl-btn .owl-nav .owl-next i {
   font-weight: 700;
   margin-left: 14px;
+  color: #feb700;
 }
 
 .btn-style-left,
@@ -401,7 +402,7 @@ body {
 }
 
 .bizagn--base-btn {
-  background-color: #e53a1c !important;
+  background-color: #e53a1c;
   padding: 20px 40px;
   padding-left: 73px;
   color: #ffffff;
@@ -417,8 +418,8 @@ body {
   overflow: hidden;
 }
 .bizagn--base-btn.white-btn {
-  background-color: #fff !important;
-  color: #ef3f22;
+  background-color: #feb700 !important;
+  color: #00233b;
 }
 .bizagn--base-btn.white-btn .svg path {
   fill: #e53a1c;
@@ -429,7 +430,7 @@ body {
   }
 }
 .bizagn--base-btn.white-btn:hover {
-  color: #ef3f22;
+  color: #fff;
 }
 .bizagn--base-btn.white-btn:before {
   display: none;
@@ -516,11 +517,15 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-bottom: 13px;
-  font-size: 20px;
+  font-size: 18px;
 }
-.bizagn--section-title h2 {
-  font-size: 56px;
+.blog .bizagn--section-title h2 {
+  font-size: 50px;
   color: #00233b;
+}
+.project .bizagn--section-title h2 {
+  font-size: 50px;
+  color: #ffffff;
 }
 @media only screen and (max-width: 991px) {
   .bizagn--section-title h2 {
@@ -713,7 +718,7 @@ section.bg-img {
 }
 
 .back-to-top:hover {
-  background-color: #e53a1c;
+  background-color: #feb700;
 }
 
 /* 3.0 Widgets */
@@ -746,7 +751,7 @@ section.bg-img {
   color: #505050;
 }
 .bizagn--widget .bizagn--widget-content .widget-social a i:hover {
-  color: #e53a1c;
+  color: #00233b;
 }
 .bizagn--widget .bizagn--widget-content ul li {
   margin-bottom: 20px;
@@ -774,7 +779,7 @@ section.bg-img {
 }
 .bizagn--widget .bizagn--widget-content form.newsletter-form .btn {
   margin-top: 30px;
-  background-color: #e53a1c;
+  background-color: #00233b;
 }
 
 .bizagn--widget.widget_search form {
@@ -2302,9 +2307,9 @@ section.bg-img {
   }
 }
 .bizagn--project-filter .bizagn--project-filter-buttons button {
-  font-weight: 700;
+  font-weight: normal;
   font-size: 16px;
-  color: #141414;
+  color: #b5b5b5;
   margin-left: 25px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -2402,17 +2407,24 @@ section.bg-img {
 .bizagn--testi-item img {
   margin: 0 auto;
   max-width: 100px;
+  width: 95px;
+  height: 95px;
   margin-bottom: 50px;
-  border-radius: 10px;
+  border: 5px solid #00233b;
+  border-radius: 20px;
 }
 .bizagn--testi-item p {
   font-family: "Vollkorn", serif;
-  color: #505050;
+  color: #00233b;
+  opacity: 54%;
   font-style: italic;
-  font-size: 22px;
+  font-size: 20px;
 }
 .bizagn--testi-item .client-pos {
   margin-top: 45px;
+  color: #feb700;
+  font-size: 18px;
+  font-weight: 700;
 }
 .bizagn--testi-item .client-pos span {
   font-weight: 700;
@@ -2420,17 +2432,18 @@ section.bg-img {
 
 /* 11.0 Call To Action */
 .bg-red {
-  background-color: #ef3f22;
+  background-color: #00233b;
   color: #ffffff;
 }
 .bg-red h2 {
   color: #ffffff;
-  font-size: 48px;
+  font-size: 44px;
   margin-top: -8px;
   margin-bottom: 12px;
 }
 .bg-red p {
   margin-bottom: -4px;
+  font-size: 15px;
 }
 
 /* 12.0 Team */
@@ -2587,6 +2600,9 @@ section.bg-img {
   position: absolute;
   top: -104px;
   right: 0;
+  color: #00233b;
+  display: flex;
+  place-items: center;
 }
 @media only screen and (max-width: 991px) {
   .bizagn--blog-section .bizagn--rm-btn {
@@ -2598,6 +2614,9 @@ section.bg-img {
   background-color: #fff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
+  width: 530px;
+  height: 553px;
+  border-radius: 20px;
 }
 .bizagn--blog-item:hover .bizagn--post-thumb img {
   -webkit-transform: scale(1.2);
@@ -2606,10 +2625,13 @@ section.bg-img {
 .bizagn--blog-item .bizagn--post-thumb {
   overflow: hidden;
   display: block;
+  padding: 20px;
+  border-radius: 20px;
 }
 .bizagn--blog-item .bizagn--post-thumb img {
   -webkit-transition: 1.5s ease;
   transition: 1.5s ease;
+  border-radius: 20px;
 }
 
 .bizagn--blog-info {
@@ -2617,17 +2639,24 @@ section.bg-img {
 }
 .bizagn--blog-info h3 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 21px;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 25px;
 }
+.bizagn--blog-info a {
+  color: #00233b;
+}
+.bizagn--blog-info a:hover {
+  color: #feb700;
+}
 .bizagn--blog-info p {
-  color: #505050;
+  color: #7e7e7e;
   line-height: 1.8;
+  font-size: 14px;
 }
 .bizagn--blog-info .bizagn--blog-meta {
   border-top: 1px solid rgba(94, 90, 117, 0.2);
-  padding-top: 25px;
+  padding-top: 10px;
   margin-top: 30px;
 }
 .bizagn--blog-info .bizagn--blog-meta .list-inline li {
@@ -2673,8 +2702,8 @@ section.bg-img {
 }
 
 .bizagn--footer-bottom {
-  background-color: #e53a1c;
-  color: #ffffff;
+  background-color: #efefef;
+  color: #00233b;
   font-size: 14px;
   padding-top: 27px;
   padding-bottom: 27px;
@@ -3757,7 +3786,7 @@ blockquote cite {
   padding-right: 30px;
 }
 
-.left {
+.team .left {
   position: absolute;
   top: 40%;
   left: -65px;
@@ -3766,7 +3795,7 @@ blockquote cite {
   background: #00233b;
   color: #fff;
   border-radius: 16px;
-  z-index: 99;
+  /* z-index: 99; */
   /* border: 3px solid transparent; */
   /* text-align: center; */
   cursor: pointer;
@@ -3774,15 +3803,16 @@ blockquote cite {
   display: grid;
   place-items: center;
 }
-.left .fa-angle-left {
+.team .left .fa-angle-left {
   font-size: 27px;
 }
 
-.left:hover {
-  background: rgb(110, 115, 116);
-  border-color: rgb(110, 115, 116);
+.team .left:hover {
+  background: transparent;
+  color: #00233b;
+  border: 2px solid #00233b;
 }
-.right {
+.team .right {
   position: absolute;
   top: 40%;
   right: -65px;
@@ -3791,19 +3821,93 @@ blockquote cite {
   background: #00233b;
   color: #fff;
   border-radius: 16px;
-  z-index: 99;
+  /* z-index: 99; */
   cursor: pointer;
   transition: 0.3s;
   display: grid;
   place-items: center;
 }
-.right .fa-chevron-right {
+.team .right .fa-angle-right {
   font-size: 27px;
 }
-.right:hover {
-  background: rgb(110, 115, 116);
-  border-color: rgb(110, 115, 116);
+.team .right:hover {
+  background: transparent;
+  color: #00233b;
+  border: 2px solid #00233b;
 }
 .slick-list {
   text-align: center;
+}
+
+.project {
+  background-color: #00233b;
+}
+
+.project img {
+  width: 363px;
+  height: 311px;
+}
+
+.bizagn--filter-item-data img {
+  width: 45px;
+}
+
+.project .bizagn--project-filter .active {
+  color: #feb700;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.slider .left {
+  position: absolute;
+  top: 48%;
+  left: -180px;
+  height: 41px;
+  width: 41px;
+  background: #feb700;
+  color: #fff;
+  border-radius: 16px;
+  /* z-index: 99; */
+  /* border: 3px solid transparent; */
+  /* text-align: center; */
+  cursor: pointer;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+}
+.slider .left .fa-angle-left {
+  font-size: 27px;
+}
+
+.slider .left:hover {
+  background: transparent;
+  color: #feb700;
+  border: 2px solid #feb700;
+}
+.slider .right {
+  position: absolute;
+  top: 48%;
+  right: -180px;
+  height: 41px;
+  width: 41px;
+  background: #feb700;
+  color: #fff;
+  border-radius: 16px;
+  /* z-index: 99; */
+  cursor: pointer;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+}
+.slider .right .fa-angle-right {
+  font-size: 27px;
+}
+.slider .right:hover {
+  background: transparent;
+  color: #feb700;
+  border: 2px solid #feb700;
+}
+
+.blog {
+  background-color: #efefef;
 }
