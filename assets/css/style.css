@@ -3911,3 +3911,47 @@ blockquote cite {
 .blog {
   background-color: #efefef;
 }
+.brand {
+  width: 200px;
+}
+
+:root {
+  --primary-color: #00233b;
+}
+body {
+}
+#top-bar .bizagn--nav-menu a {
+  color: white;
+}
+#top-bar .bizagn--nav-menu .sub-menu a {
+  color: var(--primary-color);
+}
+#top-bar :is(.bizagn--mobile-nav .line) {
+  background-color: white;
+}
+#hero :is(.title, .subtitle) {
+  color: var(--primary-color);
+}
+#hero .title {
+  font-size: 65px;
+}
+#hero .subtitle {
+  max-width: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #aeaeae;
+  margin-bottom: 38px;
+}
+#hero .back-img {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  width: 100%;
+}
+#hero .btn {
+  font-weight: 500;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 12px 28px;
+  border-radius: 6px;
+}
