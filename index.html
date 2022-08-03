@@ -12,7 +12,7 @@
     <title>Makkareso</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="assets/images/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png" />
 
     <!--==== Google Fonts ====-->
     <link
@@ -23,32 +23,32 @@
     <!-- CSS Files -->
 
     <!--==== Bootstrap css file ====-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
 
     <!--==== Font-Awesome css file ====-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
 
     <!--==== Owl Carousel ====-->
     <link
       rel="stylesheet"
-      href="assets/plugins/owl-carousel/owl.carousel.min.css"
+      href="/assets/plugins/owl-carousel/owl.carousel.min.css"
     />
 
     <!--==== Animate css file ====-->
-    <link rel="stylesheet" href="assets/plugins/animate/animate.min.css" />
+    <link rel="stylesheet" href="/assets/plugins/animate/animate.min.css" />
 
     <!--==== Style css file ====-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <!--==== Responsive css file ====-->
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
 
     <!--==== Custom css file ====-->
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
 
     <!--==== slicky ====-->
-    <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="assets/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/assets/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/assets/slick-1.8.1/slick/slick-theme.css" />
   </head>
   <body>
     <!-- Preloader -->
@@ -73,7 +73,7 @@
     <!-- End of Preloader -->
 
     <!-- Header -->
-    <header class="bizagn--header">
+    <header id="top-bar" class="bizagn--header">
       <!-- Overlay -->
       <div class="nav-ol"></div>
       <!-- End of Overlay -->
@@ -86,11 +86,11 @@
               <div class="col-md-3 col-6">
                 <!-- logo -->
                 <div class="bizagn--logo">
-                  <a href="index.html"
+                  <a href="/"
                     ><img
-                      src="assets/images/logo.png"
+                      src="/assets/images/logo.png"
                       alt=""
-                      class="img-fluid"
+                      class="img-fluid brand"
                       data-rjs="2"
                   /></a>
                 </div>
@@ -101,12 +101,12 @@
                 class="col-md-9 col-6 d-flex align-items-center justify-content-end position-static"
               >
                 <!-- Nav Menu -->
-                <div class="bizagn--nav-menu">
+                <nav class="bizagn--nav-menu">
                   <ul>
                     <li class="menu-item-has-children">
                       <a href="#">Home</a>
                       <ul class="sub-menu">
-                        <li><a href="index.html">Home v1</a></li>
+                        <li><a href="/">Home v1</a></li>
                         <li><a href="index2.html">Home v2</a></li>
                       </ul>
                     </li>
@@ -139,7 +139,7 @@
                     </li>
                     <li><a href="contact-us.html">Contact Us</a></li>
                   </ul>
-                </div>
+                </nav>
                 <!-- End of Nav Menu -->
 
                 <!-- mobile nav -->
@@ -174,7 +174,7 @@
           <!-- Menu -->
           <div class="bizagn--off-canvas-menu">
             <ul>
-              <li><a href="index.html">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="contact-us.html">Contact Us</a></li>
               <li><a href="projects.html">Project</a></li>
@@ -222,59 +222,38 @@
     <!-- End of Header -->
 
     <!-- Banner Slider -->
-    <section
-      class="bizagn--bnner-cover"
-      data-bg-img="assets/images/banner/banner-bg.png"
-    >
+    <section id="hero" class="bizagn--bnner-cover relative">
+      <div class="back-img">
+        <img src="/assets/images/hero.svg" alt="" class="" />
+      </div>
       <div class="container">
-        <div
-          class="bizagn--banner bizagn--owl-btn owl-carousel style-2"
-          data-owl-nav="true"
-          data-owl-dots="true"
-          data-owl-animate-out="fadeOut"
-          data-owl-animate-in="fadeIn"
-          data-owl-margin="5"
-        >
+        <div class="bizagn--banner bizagn--owl-btn owl-carousel style-2">
           <!-- slide 01 -->
           <div class="bizagn--banner-slide">
             <div class="row">
               <div class="col-md-6">
                 <!-- Slide Text -->
                 <div class="bizagn--banner-slide-text">
-                  <h1>We Are Creative Agency.</h1>
-                  <p>
-                    Dat krachten meenemen inwoners verbindt voordeel ton
-                    schepten. Blanken wie malakka chineezen.
+                  <h1 class="title">Every Digital Things You Need</h1>
+                  <p class="subtitle">
+                    Kami adalah sebuah tim kreatif yang dapat memberikan solusi
+                    untuk bisnis anda dalam bentuk digital dan berorientasi pada
+                    hasil agar bisnis anda dapat lebih berkembang kedepannya
                   </p>
-                  <a href="#" class="btn bizagn--base-btn">
-                    <img
-                      src="assets/images/btn-right-arrow.svg"
-                      alt=""
-                      class="svg left"
-                    />
-                    About Us
-                    <img
-                      src="assets/images/btn-right-arrow.svg"
-                      alt=""
-                      class="svg right"
-                    />
+                  <a href="#" class="btn">
+                    Tentang Kami
                   </a>
                 </div>
                 <!-- End of Slide Text -->
               </div>
               <div class="col-md-6">
                 <!-- Slide Images -->
-                <div
+                <!-- <div
                   class="bizagn--banner-slide-images d-flex justify-content-md-end"
                 >
                   <div class="main-image">
-                    <img
-                      src="assets/images/banner/illustration.png"
-                      alt=""
-                      class="img-fluid"
-                    />
                   </div>
-                </div>
+                </div> -->
                 <!-- End of Slide Images -->
               </div>
             </div>
@@ -294,13 +273,13 @@
                   </p>
                   <a href="#" class="btn bizagn--base-btn">
                     <img
-                      src="assets/images/btn-right-arrow.svg"
+                      src="/assets/images/btn-right-arrow.svg"
                       alt=""
                       class="svg left"
                     />
                     About Us
                     <img
-                      src="assets/images/btn-right-arrow.svg"
+                      src="/assets/images/btn-right-arrow.svg"
                       alt=""
                       class="svg right"
                     />
@@ -315,7 +294,7 @@
                 >
                   <div class="main-image">
                     <img
-                      src="assets/images/banner/illustration.png"
+                      src="/assets/images/banner/illustration.png"
                       alt=""
                       class="img-fluid"
                     />
@@ -340,13 +319,13 @@
                   </p>
                   <a href="#" class="btn bizagn--base-btn">
                     <img
-                      src="assets/images/btn-right-arrow.svg"
+                      src="/assets/images/btn-right-arrow.svg"
                       alt=""
                       class="svg left"
                     />
                     About Us
                     <img
-                      src="assets/images/btn-right-arrow.svg"
+                      src="/assets/images/btn-right-arrow.svg"
                       alt=""
                       class="svg right"
                     />
@@ -361,7 +340,7 @@
                 >
                   <div class="main-image">
                     <img
-                      src="assets/images/banner/illustration.png"
+                      src="/assets/images/banner/illustration.png"
                       alt=""
                       class="img-fluid"
                     />
@@ -401,7 +380,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/1.svg"
+                src="/assets/images/service/1.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -418,7 +397,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/2.svg"
+                src="/assets/images/service/2.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -435,7 +414,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/3.svg"
+                src="/assets/images/service/3.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -452,7 +431,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/4.svg"
+                src="/assets/images/service/4.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -469,7 +448,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/5.svg"
+                src="/assets/images/service/5.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -486,7 +465,7 @@
           <div class="bizagn--service-slider-item">
             <div class="bizagn--service-item">
               <img
-                src="assets/images/service/6.svg"
+                src="/assets/images/service/6.svg"
                 alt=""
                 class="img-fluid svg"
               />
@@ -504,7 +483,7 @@
     <!-- End of Service -->
 
     <!-- Project -->
-    <section class="pt-120 pb-120" data-bg-img="assets/images/project/bg.png">
+    <section class="pt-120 pb-120" data-bg-img="/assets/images/project/bg.png">
       <div class="container">
         <!-- Section Title -->
         <div class="bizagn--section-title">
@@ -533,7 +512,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-1.jpg"
+                    src="/assets/images/project/0-1.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -542,7 +521,7 @@
                     <p>Branding</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -557,7 +536,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-2.jpg"
+                    src="/assets/images/project/0-2.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -566,7 +545,7 @@
                     <p>Creative</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -581,7 +560,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-3.jpg"
+                    src="/assets/images/project/0-3.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -590,7 +569,7 @@
                     <p>Web</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -605,7 +584,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-4.jpg"
+                    src="/assets/images/project/0-4.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -614,7 +593,7 @@
                     <p>Branding</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -629,7 +608,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-5.jpg"
+                    src="/assets/images/project/0-5.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -638,7 +617,7 @@
                     <p>Creative</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -653,7 +632,7 @@
               <div class="d-flex justify-content-center">
                 <div class="d-inline-block position-relative">
                   <img
-                    src="assets/images/project/0-6.jpg"
+                    src="/assets/images/project/0-6.jpg"
                     alt=""
                     class="img-fluid"
                   />
@@ -662,7 +641,7 @@
                     <p>Web</p>
                     <a href="project-details.html"
                       ><img
-                        src="assets/images/project/arrow.svg"
+                        src="/assets/images/project/arrow.svg"
                         alt=""
                         class="img-fluid"
                     /></a>
@@ -695,7 +674,7 @@
               class="bizagn--testi-slider bizagn--owl-btn owl-carousel bizagn--nav-95px"
               data-owl-nav="true"
               data-owl-autoplay="false"
-              data-bg-img="assets/images/testimonial/map-bg.png"
+              data-bg-img="/assets/images/testimonial/map-bg.png"
             > -->
             <!-- Testimonial Slider Item -->
             <div class="slider">
@@ -703,7 +682,7 @@
                 <div class="bizagn--testi-slider-item">
                   <div class="bizagn--testi-item text-center">
                     <img
-                      src="assets/images/testimonial/client-c1.png"
+                      src="/assets/images/testimonial/client-c1.png"
                       alt=""
                       class="img-fluid"
                     />
@@ -726,7 +705,7 @@
                 <div class="bizagn--testi-slider-item">
                   <div class="bizagn--testi-item text-center">
                     <img
-                      src="assets/images/testimonial/client-2.png"
+                      src="/assets/images/testimonial/client-2.png"
                       alt=""
                       class="img-fluid"
                     />
@@ -749,7 +728,7 @@
                 <div class="bizagn--testi-slider-item">
                   <div class="bizagn--testi-item text-center">
                     <img
-                      src="assets/images/testimonial/client-3.png"
+                      src="/assets/images/testimonial/client-3.png"
                       alt=""
                       class="img-fluid"
                     />
@@ -778,7 +757,7 @@
     <!-- Call To Action -->
     <section
       class="pt-120 pb-120 bg-red"
-      data-bg-img="assets/images/cta-bg.png"
+      data-bg-img="/assets/images/cta-bg.png"
     >
       <div class="container">
         <div class="row align-items-center">
@@ -792,13 +771,13 @@
           <div class="col-lg-3 col-md-4 offset-lg-1">
             <a href="#" class="btn bizagn--base-btn white-btn">
               <img
-                src="assets/images/btn-right-arrow.svg"
+                src="/assets/images/btn-right-arrow.svg"
                 alt=""
                 class="svg left"
               />
               Hire us
               <img
-                src="assets/images/btn-right-arrow.svg"
+                src="/assets/images/btn-right-arrow.svg"
                 alt=""
                 class="svg right"
               />
@@ -828,7 +807,7 @@
           <!-- Team Item -->
           <div class="bizagn--team-slider-item">
             <div class="bizagn--team-item text-center">
-              <img src="assets/images/team/0-1.jpg" alt="" class="img-fluid" />
+              <img src="/assets/images/team/0-1.jpg" alt="" class="img-fluid" />
               <div class="bizagn--team-item-info">
                 <h3>Andrea Anderson</h3>
                 <p>Graphics Designer</p>
@@ -846,7 +825,7 @@
           <!-- Team Item -->
           <div class="bizagn--team-slider-item">
             <div class="bizagn--team-item text-center">
-              <img src="assets/images/team/0-2.jpg" alt="" class="img-fluid" />
+              <img src="/assets/images/team/0-2.jpg" alt="" class="img-fluid" />
               <div class="bizagn--team-item-info">
                 <h3>Kyle Gray</h3>
                 <p>Web Designer</p>
@@ -864,7 +843,7 @@
           <!-- Team Item -->
           <div class="bizagn--team-slider-item">
             <div class="bizagn--team-item text-center">
-              <img src="assets/images/team/0-3.jpg" alt="" class="img-fluid" />
+              <img src="/assets/images/team/0-3.jpg" alt="" class="img-fluid" />
               <div class="bizagn--team-item-info">
                 <h3>Mike Taylor</h3>
                 <p>UI Designer</p>
@@ -882,7 +861,7 @@
           <!-- Team Item -->
           <div class="bizagn--team-slider-item">
             <div class="bizagn--team-item text-center">
-              <img src="assets/images/team/0-4.jpg" alt="" class="img-fluid" />
+              <img src="/assets/images/team/0-4.jpg" alt="" class="img-fluid" />
               <div class="bizagn--team-item-info">
                 <h3>Aline Cardin</h3>
                 <p>App Designer</p>
@@ -900,7 +879,7 @@
           <!-- Team Item -->
           <div class="bizagn--team-slider-item">
             <div class="bizagn--team-item text-center">
-              <img src="assets/images/team/0-5.jpg" alt="" class="img-fluid" />
+              <img src="/assets/images/team/0-5.jpg" alt="" class="img-fluid" />
               <div class="bizagn--team-item-info">
                 <h3>Andre Russel</h3>
                 <p>Software Designer</p>
@@ -1053,7 +1032,11 @@
             class="col-lg-5 offset-lg-1 d-flex align-items-bottom justify-content-center bizagn--faq-img"
           >
             <div class="bizagn--faq-img-cover">
-              <img src="assets/images/faq-illus.png" alt="" class="img-fluid" />
+              <img
+                src="/assets/images/faq-illus.png"
+                alt=""
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
@@ -1074,7 +1057,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/1.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/1.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1082,7 +1065,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/2.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/2.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1090,7 +1073,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/3.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/3.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1098,7 +1081,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/4.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/4.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1106,7 +1089,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/5.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/5.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1114,7 +1097,7 @@
           <!-- Brand Item -->
           <div class="bizagn--brand-item d-flex justify-content-center">
             <a href="#"
-              ><img src="assets/images/brands/6.png" alt="" class="img-fluid"
+              ><img src="/assets/images/brands/6.png" alt="" class="img-fluid"
             /></a>
           </div>
           <!-- End of Brand Item -->
@@ -1125,7 +1108,7 @@
     <!-- End of Brands -->
 
     <!-- Blogs -->
-    <section class="pt-120 pb-70" data-bg-img="assets/images/blogs/bg.png">
+    <section class="pt-120 pb-70" data-bg-img="/assets/images/blogs/bg.png">
       <div class="container">
         <!-- Section Title -->
         <div class="bizagn--section-title">
@@ -1143,7 +1126,7 @@
             <div class="bizagn--blog-item">
               <a href="#" class="bizagn--post-thumb">
                 <img
-                  src="assets/images/blogs/0-1.jpg"
+                  src="/assets/images/blogs/0-1.jpg"
                   alt=""
                   class="img-fluid"
                 />
@@ -1172,7 +1155,7 @@
             <div class="bizagn--blog-item">
               <a href="#" class="bizagn--post-thumb">
                 <img
-                  src="assets/images/blogs/0-2.jpg"
+                  src="/assets/images/blogs/0-2.jpg"
                   alt=""
                   class="img-fluid"
                 />
@@ -1211,7 +1194,7 @@
       <!-- Footer Top -->
       <div
         class="bizagn--footer-top"
-        data-bg-img="assets/images/footer-map.png"
+        data-bg-img="/assets/images/footer-map.png"
       >
         <div class="container">
           <div class="row">
@@ -1221,7 +1204,7 @@
                 <div class="bizagn--widget-content">
                   <a href="#">
                     <img
-                      src="assets/images/logo-footer.png"
+                      src="/assets/images/logo-footer.png"
                       alt=""
                       class="img-fluid"
                       data-rjs="2"
@@ -1285,13 +1268,13 @@
                     />
                     <button type="submit" class="btn bizagn--base-btn">
                       <img
-                        src="assets/images/btn-right-arrow.svg"
+                        src="/assets/images/btn-right-arrow.svg"
                         alt=""
                         class="svg left"
                       />
                       Subscribe
                       <img
-                        src="assets/images/btn-right-arrow.svg"
+                        src="/assets/images/btn-right-arrow.svg"
                         alt=""
                         class="svg right"
                       />
@@ -1329,35 +1312,35 @@
     <!-- JS Files -->
 
     <!-- ==== JQuery 3.3.1 js file ==== -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
 
     <!-- ==== Bootstrap js file ==== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- ==== Owl Carousel js file ==== -->
-    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
 
     <!-- ==== Menumaker js file ==== -->
-    <script src="assets/plugins/menumaker/menumaker.js"></script>
+    <script src="/assets/plugins/menumaker/menumaker.js"></script>
 
     <!-- ==== Isotope js file ==== -->
-    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="/assets/plugins/isotope/imagesloaded.pkgd.min.js"></script>
 
     <!-- ==== Ratina js file ==== -->
-    <script src="assets/plugins/ratinajs/retina.min.js"></script>
+    <script src="/assets/plugins/ratinajs/retina.min.js"></script>
 
     <!-- ==== google map api key ==== -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
 
     <!-- ==== Script js file ==== -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 
     <!-- ==== Custom js file ==== -->
-    <script src="assets/js/custom.js"></script>
+    <script src="/assets/js/custom.js"></script>
 
     <!-- ==== Slicky ==== -->
-    <script src="assets/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function () {
         $(".slider").slick({
