@@ -3971,3 +3971,9 @@ body {
     display: none;
   }
 }
+
+@media (min-width: 986px) {
+  .image-banner {
+    display: none;
+  }
+}
