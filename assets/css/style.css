@@ -1772,6 +1772,9 @@ section.bg-img {
   transition: 0.4s ease-in-out;
   box-shadow: 0px 0px 2px #ccc;
 }
+.bizagn--header .bizagn--sticky-nav.sticky-header-true.sticky-nav a {
+  color: var(--primary-color) !important;
+}
 .bizagn--header
   .bizagn--sticky-nav.sticky-header-true.sticky-nav
   .bizagn--nav-menu
@@ -3843,9 +3846,8 @@ blockquote cite {
   background-color: #00233b;
 }
 
-.project img {
-  width: 363px;
-  height: 311px;
+.img-project {
+  padding: 5px;
 }
 
 .bizagn--filter-item-data img {
