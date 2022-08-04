@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "cat": "illustration",
+    "src": "/assets/images/desain/1.jpeg"
+  },
+  {
+    "id": 2,
+    "cat": "logo",
+    "src": "/assets/images/desain/2.jpeg"
+  },
+  {
+    "id": 3,
+    "cat": "illustration",
+    "src": "/assets/images/desain/3.jpeg"
+  },
+  {
+    "id": 4,
+    "cat": "logo",
+    "src": "/assets/images/desain/4.jpeg"
+  },
+  {
+    "id": 5,
+    "cat": "illustration",
+    "src": "/assets/images/desain/5.jpeg"
+  },
+  {
+    "id": 6,
+    "cat": "logo",
+    "src": "/assets/images/desain/6.jpeg"
+  },
+  {
+    "id": 7,
+    "cat": "illustration",
+    "src": "/assets/images/desain/7.jpeg"
+  },
+  {
+    "id": 8,
+    "cat": "logo",
+    "src": "/assets/images/desain/8.jpeg"
+  },
+  {
+    "id": 9,
+    "cat": "illustration",
+    "src": "/assets/images/desain/9.jpeg"
+  },
+  {
+    "id": 10,
+    "cat": "illustration",
+    "src": "/assets/images/desain/10.jpeg"
+  }
+]
