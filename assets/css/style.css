@@ -4057,3 +4057,8 @@ body {
 .slick-slide img {
   border-radius: 5px;
 }
+#project .thumb {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}

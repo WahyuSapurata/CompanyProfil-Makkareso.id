@@ -164,29 +164,6 @@ We may release future updates so it will overwrite this file. it's better and sa
     }
   );
 
-  /* 06: Isotope - Filter
-    ==============================================*/
-  var $grid = $(".isotope").isotope({
-    itemSelector: ".bizagn--filter-item",
-  });
-
-  $(".bizagn--project-filter-buttons").on("click", "button", function () {
-    var filterValue = $(this).attr("data-filter");
-    var active = document.querySelectorAll(".filter-btn").forEach((e) => {
-      e.classList.remove("active");
-    });
-
-    // this.removeClass("active");
-    $(this).addClass("active");
-    // $(this).toggleClass("active");
-    // this.classList.toggle("active");
-    $grid.isotope({ filter: filterValue });
-  });
-
-  $grid.imagesLoaded().progress(function () {
-    $grid.isotope("layout");
-  });
-
   /* 07: Google Map
     ==============================================*/
   var $map = $('[data-trigger="map"]'),
@@ -501,4 +478,147 @@ We may release future updates so it will overwrite this file. it's better and sa
     // $(this).toggleClass("active");
     // this.classList.toggle("active");
   });
+
+  document.addEventListener("DOMContentLoaded", init_projects);
+  $.ready(() => {});
+  $("#project-prev").on("click", (e) => {
+    console.log("prev");
+  });
+  $("#project-next").on("click", (e) => {
+    console.log("next");
+  });
+  async function init_projects() {
+    try {
+      const res = await fetch("/assets/data/projects.json");
+      const data = await res.json();
+      const container = document.getElementById("project-container");
+      const pagination = pagenation_init(6, data.length);
+      const list = pagenating(pagination, data, render_project);
+      if (list.length) {
+        container.replaceChildren(...list);
+      }
+      const btn_next = document.getElementById("project-next");
+      const btn_prev = document.getElementById("project-prev");
+      disabled_check();
+      init_isotop();
+
+      btn_next.addEventListener("click", (e) => {
+        pagination.next();
+        const list = pagenating(pagination, data, render_project);
+        container.replaceChildren(...list);
+        disabled_check();
+      });
+      btn_prev.addEventListener("click", (e) => {
+        pagination.prev();
+        const list = pagenating(pagination, data, render_project);
+        container.replaceChildren(...list);
+        disabled_check();
+      });
+      function disabled_check() {
+        btn_next.disabled = !pagination.can_next();
+        btn_prev.disabled = !pagination.can_prev();
+        console.log(!pagination.can_next(), !pagination.can_prev());
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  function render_project(value) {
+    const div = document.createElement("div");
+    div.className = `col-md-4 bizagn--filter-item ${value.cat}`;
+    div.innerHTML = `
+                <div class="d-flex justify-content-center">
+                  <div class="d-inline-block position-relative">
+                    <img
+                      src="${value.src}"
+                      alt=""
+                      class="img-project thumb"
+                    />
+                    <div class="bizagn--filter-item-data">
+                      <h4><a href="project-details.html"> Project ${value.id} </a></h4>
+                      <p>Branding</p>
+                      <a href="project-details.html"
+                        ><img
+                          src="/assets/images/project/arrow.svg"
+                          alt=""
+                          class="img-fluid"
+                      /></a>
+                    </div>
+                  </div>
+                </div>`;
+    return div;
+  }
+  function pagenating(conf, list, renderer) {
+    const result = [];
+    for (let index = conf.current; index < conf.buffer; index++) {
+      const element = list[index];
+      const item = renderer(element);
+      result.push(item);
+    }
+    return result;
+  }
+  function pagenation_init(step, length) {
+    let buffer = step;
+    if (step >= length) {
+      buffer = length;
+    }
+    return {
+      current: 0,
+      step,
+      length,
+      buffer,
+      next() {
+        this.current += this.step;
+        let buffer = this.current + this.step;
+        if (buffer >= this.length) {
+          buffer = this.length;
+        }
+        this.buffer = buffer;
+      },
+      prev() {
+        this.current -= this.step;
+        let buffer = this.current + this.step;
+        if (buffer <= 0) {
+          buffer = 0;
+        }
+        this.buffer = buffer;
+      },
+      can_next() {
+        if (this.current + this.step >= this.length) {
+          return false;
+        }
+        return true;
+      },
+      can_prev() {
+        if (this.current <= 0) {
+          return false;
+        }
+        return true;
+      },
+    };
+  }
+  function init_isotop() {
+    /* 06: Isotope - Filter
+    ==============================================*/
+    var $grid = $(".isotope").isotope({
+      itemSelector: ".bizagn--filter-item",
+    });
+
+    $(".bizagn--project-filter-buttons").on("click", "button", function () {
+      var filterValue = $(this).attr("data-filter");
+      var active = document.querySelectorAll(".filter-btn").forEach((e) => {
+        e.classList.remove("active");
+      });
+
+      // this.removeClass("active");
+      $(this).addClass("active");
+      // $(this).toggleClass("active");
+      // this.classList.toggle("active");
+      $grid.isotope({ filter: filterValue });
+    });
+
+    $grid.imagesLoaded().progress(function () {
+      $grid.isotope("layout");
+    });
+  }
 })(jQuery);
