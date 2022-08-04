@@ -2489,13 +2489,14 @@ section.bg-img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #00233b;
+  background-color: #feb700;
   color: #fff;
-  padding: 40px 0px;
+  padding: 5px 0px;
   margin-bottom: 35px;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   opacity: 0;
+  border-radius: 5px;
 }
 .bizagn--team-item .bizagn--team-item-info h3 {
   color: #fff;
@@ -3842,6 +3843,59 @@ blockquote cite {
   color: #00233b;
   border: 2px solid #00233b;
 }
+
+/*  */
+
+.team2 .left {
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  height: 41px;
+  width: 41px;
+  background: #00233b;
+  color: #fff;
+  border-radius: 16px;
+  z-index: 1;
+  /* border: 3px solid transparent; */
+  /* text-align: center; */
+  cursor: pointer;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+}
+.team2 .left .fa-angle-left {
+  font-size: 27px;
+}
+
+.team2 .left:hover {
+  background: transparent;
+  color: #00233b;
+  border: 2px solid #00233b;
+}
+.team2 .right {
+  position: absolute;
+  top: 40%;
+  right: 0px;
+  height: 41px;
+  width: 41px;
+  background: #00233b;
+  color: #fff;
+  border-radius: 16px;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.3s;
+  display: grid;
+  place-items: center;
+}
+.team2 .right .fa-angle-right {
+  font-size: 27px;
+}
+.team2 .right:hover {
+  background: transparent;
+  color: #00233b;
+  border: 2px solid #00233b;
+}
+
 .slick-list {
   text-align: center;
 }
@@ -3967,6 +4021,12 @@ body {
   background-color: #00233b;
 }
 
+#team .slick-track {
+  display: flex;
+  column-gap: 5px;
+  height: 217px;
+}
+
 @media (max-width: 986px) {
   #hero .back-img {
     display: none;
@@ -3978,10 +4038,22 @@ body {
   .brand {
     padding: 10px 0;
   }
+  #team .show {
+    display: none;
+  }
+  #team .slick-track {
+    height: 255px;
+  }
 }
 
 @media (min-width: 986px) {
   .image-banner {
     display: none;
   }
+  #team .hiden {
+    display: none;
+  }
+}
+.slick-slide img {
+  border-radius: 5px;
 }
