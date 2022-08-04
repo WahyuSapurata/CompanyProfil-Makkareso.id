@@ -177,7 +177,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #e53a1c;
+  color: #feb700;
   text-decoration: none;
   outline: none !important;
   -webkit-transition: 0.2s ease;
@@ -704,7 +704,7 @@ section.bg-img {
   position: fixed;
   bottom: 0px;
   right: 40px;
-  background-color: #232323;
+  background-color: #00233b;
   color: #ffffff;
   cursor: pointer;
   visibility: hidden;
@@ -2087,8 +2087,8 @@ section.bg-img {
   ul
   li
   a:hover {
-  text-shadow: -1px -1px 0 #e53a1c, 1px -1px 0 #e53a1c, -1px 1px 0 #e53a1c,
-    1px 1px 0 #e53a1c;
+  text-shadow: -1px -1px 0 #00233b, 1px -1px 0 #00233b, -1px 1px 0 #00233b,
+    1px 1px 0 #00233b;
   color: #ffffff;
 }
 .bizagn--off-canvas .bizagn--off-canvas-cover .bizagn--off-canvas-newsletter {
@@ -2122,13 +2122,14 @@ section.bg-img {
   .bizagn--btn-mix {
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #e53a1c;
+  background-color: #00233b;
 }
 .bizagn--off-canvas
   .bizagn--off-canvas-cover
   .bizagn--off-canvas-newsletter
   .bizagn--btn-mix:hover {
-  background-color: #141414;
+  background-color: #feb700;
+  color: #000000;
 }
 .bizagn--off-canvas .bizagn--off-canvas-cover .bizagn--off-canvas-social {
   margin-bottom: 40px;
@@ -3952,7 +3953,7 @@ body {
   max-width: none;
   font-size: 15px;
   font-weight: 500;
-  color: #aeaeae;
+  color: #646464;
   margin-bottom: 38px;
 }
 #hero .back-img {
