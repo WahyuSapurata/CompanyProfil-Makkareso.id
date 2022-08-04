@@ -3965,3 +3965,8 @@ body {
 #hero .btn {
   background-color: #00233b;
 }
+#project .thumb {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}

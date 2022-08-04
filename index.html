@@ -584,142 +584,18 @@
           <div class="bizagn--project-filter-buttons">
             <button class="filter-btn active" data-filter="*">All</button>
             <button class="filter-btn" data-filter=".web">Web</button>
-            <button class="filter-btn" data-filter=".logo">Mobile</button>
+            <button class="filter-btn" data-filter=".mobile">Mobile</button>
             <button class="filter-btn" data-filter=".logo">
               Logo & Branding
             </button>
-            <button class="filter-btn" data-filter=".web">ilustrasi</button>
+            <button class="filter-btn" data-filter=".illustration">Illustration</button>
           </div>
           <!-- End of Project Filter Buttons -->
 
-          <div class="row no-gutters bizagn--project-filter-items isotope">
-            <div class="col-md-4 bizagn--filter-item logo">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-1.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 1 </a></h4>
-                    <p>Branding</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 bizagn--filter-item logo">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-2.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 2 </a></h4>
-                    <p>Creative</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 bizagn--filter-item web">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-3.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 3 </a></h4>
-                    <p>Web</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 bizagn--filter-item branding">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-4.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 4 </a></h4>
-                    <p>Branding</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 bizagn--filter-item creative">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-5.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 5 </a></h4>
-                    <p>Creative</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 bizagn--filter-item web">
-              <div class="d-flex justify-content-center">
-                <div class="d-inline-block position-relative">
-                  <img
-                    src="/assets/images/project/0-6.jpg"
-                    alt=""
-                    class="img-project"
-                  />
-                  <div class="bizagn--filter-item-data">
-                    <h4><a href="project-details.html"> Project 6 </a></h4>
-                    <p>Web</p>
-                    <a href="project-details.html"
-                      ><img
-                        src="/assets/images/project/arrow.svg"
-                        alt=""
-                        class="img-fluid"
-                    /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            id="project-container"
+            class="row no-gutters bizagn--project-filter-items isotope"
+          ></div>
         </div>
 
         <!-- <div class="container">
@@ -741,8 +617,12 @@
         <div class="">
           <div class="">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button id="project-prev" type="button" class="btn btn-light">Previous</button>
-              <button id="project-next" type="button" class="btn btn-light">Next</button>
+              <button id="project-prev" type="button" class="btn btn-light">
+                Previous
+              </button>
+              <button id="project-next" type="button" class="btn btn-light">
+                Next
+              </button>
             </div>
             <!-- <button type="button" class="col-sm btn btn-dark mt-4">
               Load More
