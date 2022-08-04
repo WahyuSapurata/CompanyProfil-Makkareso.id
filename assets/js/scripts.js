@@ -501,4 +501,15 @@ We may release future updates so it will overwrite this file. it's better and sa
     // $(this).toggleClass("active");
     // this.classList.toggle("active");
   });
+
+  console.log("test");
+  $.ready(() => {
+    
+  })
+  $("#project-prev").on("click", (e) => {
+    console.log("prev");
+  });
+  $("#project-next").on("click", (e) => {
+    console.log("next");
+  });
 })(jQuery);
