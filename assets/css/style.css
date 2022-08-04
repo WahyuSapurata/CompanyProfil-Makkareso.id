@@ -66,6 +66,10 @@
   outline: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ol,
 ul,
 p {
@@ -1772,9 +1776,7 @@ section.bg-img {
   transition: 0.4s ease-in-out;
   box-shadow: 0px 0px 2px #ccc;
 }
-.bizagn--header .bizagn--sticky-nav.sticky-header-true.sticky-nav a {
-  color: var(--primary-color) !important;
-}
+
 .bizagn--header
   .bizagn--sticky-nav.sticky-header-true.sticky-nav
   .bizagn--nav-menu
@@ -3914,7 +3916,7 @@ blockquote cite {
   background-color: #efefef;
 }
 .brand {
-  width: 200px;
+  width: 160px;
 }
 
 :root {
@@ -3924,6 +3926,12 @@ body {
 }
 #top-bar .bizagn--nav-menu a {
   color: white;
+}
+#top-bar .sticky-nav .bizagn--nav-menu a {
+  color: var(--primary-color);
+}
+#top-bar .sticky-nav .bizagn--nav-menu .active {
+  color: #feb700;
 }
 #top-bar .bizagn--nav-menu .sub-menu a {
   color: var(--primary-color);
@@ -3951,9 +3959,5 @@ body {
   width: 100%;
 }
 #hero .btn {
-  font-weight: 500;
-  color: white;
-  background-color: var(--primary-color);
-  padding: 12px 28px;
-  border-radius: 6px;
+  background-color: #00233b;
 }
