@@ -3965,3 +3965,9 @@ body {
 #hero .btn {
   background-color: #00233b;
 }
+
+@media (max-width: 986px) {
+  #hero .back-img {
+    display: none;
+  }
+}
