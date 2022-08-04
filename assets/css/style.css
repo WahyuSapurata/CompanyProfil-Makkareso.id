@@ -3933,6 +3933,9 @@ body {
 #top-bar .sticky-nav .bizagn--nav-menu .active {
   color: #feb700;
 }
+#top-bar .sticky-nav :is(.bizagn--mobile-nav .line) {
+  background-color: #00233b;
+}
 #top-bar .bizagn--nav-menu .sub-menu a {
   color: var(--primary-color);
 }
