@@ -490,4 +490,15 @@ We may release future updates so it will overwrite this file. it's better and sa
         .html("<span>" + res[1] + "</span>");
     });
   });
+
+  $(".menu-item-has-children").on("click", "a", function () {
+    var active = document.querySelectorAll(".tes").forEach((e) => {
+      e.classList.remove("active");
+    });
+
+    // this.removeClass("active");
+    $(this).addClass("active");
+    // $(this).toggleClass("active");
+    // this.classList.toggle("active");
+  });
 })(jQuery);
