@@ -1826,7 +1826,7 @@ section.bg-img {
 }
 @media only screen and (max-width: 991px) {
   .bizagn--nav-menu #menu-button {
-    display: block;
+    display: none;
   }
 }
 .bizagn--nav-menu ul {
@@ -2304,6 +2304,7 @@ section.bg-img {
   position: absolute;
   top: -104px;
   right: 0;
+  text-align: center;
 }
 @media only screen and (max-width: 767px) {
   .bizagn--project-filter .bizagn--project-filter-buttons {
@@ -3969,6 +3970,13 @@ body {
 @media (max-width: 986px) {
   #hero .back-img {
     display: none;
+  }
+
+  #top-bar :is(.bizagn--mobile-nav .line) {
+    background-color: #00233b;
+  }
+  .brand {
+    padding: 10px 0;
   }
 }
 
