@@ -487,45 +487,67 @@ We may release future updates so it will overwrite this file. it's better and sa
     $(".btn-custom").removeClass("hide");
   });
 
+  const wait = function (timeout, any) {
+    return new Promise((res) => {
+      setTimeout(() => {
+        res(any);
+      }, timeout);
+    });
+  };
   document.addEventListener("DOMContentLoaded", init_projects);
-  $.ready(() => {});
-  $("#project-prev").on("click", (e) => {
-    console.log("prev");
-  });
-  $("#project-next").on("click", (e) => {
-    console.log("next");
-  });
+  // $.ready(() => {});
+  // $("#project-prev").on("click", (e) => {
+  //   console.log("prev");
+  // });
+  // $("#project-next").on("click", (e) => {
+  //   console.log("next");
+  // });
   async function init_projects() {
     try {
       const res = await fetch("/assets/data/projects.json");
       const data = await res.json();
       const container = document.getElementById("project-container");
       const pagination = pagenation_init(6, data.length);
-      const list = pagenating(pagination, data, render_project);
+      let list = pagenating(pagination, data, render_project);
       if (list.length) {
         container.replaceChildren(...list);
       }
       const btn_next = document.getElementById("project-next");
       const btn_prev = document.getElementById("project-prev");
       disabled_check();
-      init_isotop();
+      let $grid = init_isotop(container);
 
       btn_next.addEventListener("click", (e) => {
         pagination.next();
-        const list = pagenating(pagination, data, render_project);
-        container.replaceChildren(...list);
-        disabled_check();
+        $grid.isotope("remove", list);
+        list = pagenating(pagination, data, render_project);
+        wait(100)
+          .then(() => {
+            $grid.isotope("insert", list);
+            return wait(100);
+          })
+          .then(() => {
+            $grid.isotope("layout");
+            disabled_check();
+          });
       });
       btn_prev.addEventListener("click", (e) => {
         pagination.prev();
-        const list = pagenating(pagination, data, render_project);
-        container.replaceChildren(...list);
-        disabled_check();
+        $grid.isotope("remove", list);
+        list = pagenating(pagination, data, render_project);
+        wait(100)
+          .then(() => {
+            $grid.isotope("insert", list);
+            return wait(100);
+          })
+          .then(() => {
+            $grid.isotope("layout");
+            disabled_check();
+          });
       });
       function disabled_check() {
         btn_next.disabled = !pagination.can_next();
         btn_prev.disabled = !pagination.can_prev();
-        console.log(!pagination.can_next(), !pagination.can_prev());
       }
     } catch (error) {
       console.log(error);
@@ -605,13 +627,12 @@ We may release future updates so it will overwrite this file. it's better and sa
       },
     };
   }
-  function init_isotop() {
+  function init_isotop(element) {
     /* 06: Isotope - Filter
     ==============================================*/
-    var $grid = $(".isotope").isotope({
+    let $grid = $(element).isotope({
       itemSelector: ".bizagn--filter-item",
     });
-
     $(".bizagn--project-filter-buttons").on("click", "button", function () {
       var filterValue = $(this).attr("data-filter");
       var active = document.querySelectorAll(".filter-btn").forEach((e) => {
@@ -624,9 +645,9 @@ We may release future updates so it will overwrite this file. it's better and sa
       // this.classList.toggle("active");
       $grid.isotope({ filter: filterValue });
     });
-
     $grid.imagesLoaded().progress(function () {
       $grid.isotope("layout");
     });
+    return $grid;
   }
 })(jQuery);
