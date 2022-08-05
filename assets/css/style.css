@@ -4070,11 +4070,13 @@ body {
 .prev-btn {
   font-weight: 700 !important;
   color: #fff;
-  opacity: 0.7;
 }
 .next-btn {
   font-weight: 700 !important;
-  color: #feb700;
+  color: #fff;
+}
+.btn-group :is(.prev-btn, .next-btn):disabled {
+  opacity: 0.7;
 }
 .btn-group .prev-btn:hover {
   opacity: 1;

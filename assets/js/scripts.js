@@ -479,14 +479,6 @@ We may release future updates so it will overwrite this file. it's better and sa
     // this.classList.toggle("active");
   });
 
-  $(".bizagn--project-filter").on("click", "button.c", function () {
-    $(".btn-custom").addClass("hide");
-  });
-
-  $(".bizagn--project-filter").on("click", "button.b", function () {
-    $(".btn-custom").removeClass("hide");
-  });
-
   const wait = function (timeout, any) {
     return new Promise((res) => {
       setTimeout(() => {
@@ -494,29 +486,67 @@ We may release future updates so it will overwrite this file. it's better and sa
       }, timeout);
     });
   };
+  const idle = function (timeout) {
+    return new Promise((res) => {
+      requestIdleCallback(
+        (d) => {
+          res(d);
+        },
+        { timeout }
+      );
+    });
+  };
   document.addEventListener("DOMContentLoaded", init_projects);
-  // $.ready(() => {});
-  // $("#project-prev").on("click", (e) => {
-  //   console.log("prev");
-  // });
-  // $("#project-next").on("click", (e) => {
-  //   console.log("next");
-  // });
   async function init_projects() {
     try {
-      const res = await fetch("/assets/data/projects.json");
+      await idle();
+      const res = await fetch("/assets/data/projects.v2.json");
       const data = await res.json();
       const container = document.getElementById("project-container");
       const pagination = pagenation_init(6, data.length);
+      const pagination_all = pagenation_init(data.length, data.length);
       let list = pagenating(pagination, data, render_project);
       if (list.length) {
         container.replaceChildren(...list);
       }
+      const btn_group = document.getElementById("project-btn-group");
       const btn_next = document.getElementById("project-next");
       const btn_prev = document.getElementById("project-prev");
-      disabled_check();
       let $grid = init_isotop(container);
+      disabled_check();
 
+      document
+        .querySelectorAll(".bizagn--project-filter .filter-btn.c")
+        .forEach((element) => {
+          element.addEventListener("click", (event) => {
+            btn_group.classList.add("hide");
+            $grid.isotope("remove", list);
+            list = pagenating(pagination_all, data, render_project);
+            wait(100)
+              .then(() => {
+                $grid.isotope("insert", list);
+                return wait(100);
+              })
+              .then(() => {
+                $grid.isotope("layout");
+              });
+          });
+        });
+      document
+        .querySelector(".bizagn--project-filter .filter-btn.b")
+        .addEventListener("click", (event) => {
+          btn_group.classList.remove("hide");
+          $grid.isotope("remove", list);
+          list = pagenating(pagination, data, render_project);
+          wait(100)
+            .then(() => {
+              $grid.isotope("insert", list);
+              return wait(100);
+            })
+            .then(() => {
+              $grid.isotope("layout");
+            });
+        });
       btn_next.addEventListener("click", (e) => {
         pagination.next();
         $grid.isotope("remove", list);
@@ -550,7 +580,7 @@ We may release future updates so it will overwrite this file. it's better and sa
         btn_prev.disabled = !pagination.can_prev();
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
   function render_project(value) {
@@ -566,7 +596,7 @@ We may release future updates so it will overwrite this file. it's better and sa
                     />
                     <div class="bizagn--filter-item-data">
                       <h4><a href="project-details.html"> Project ${value.id} </a></h4>
-                      <p>Branding</p>
+                      <p>${value.cat}</p>
                       <a href="project-details.html"
                         ><img
                           src="/assets/images/project/arrow.svg"
