@@ -833,14 +833,16 @@
         <div class="bizagn--project-filter">
           <!-- Project Filter Buttons -->
           <div class="bizagn--project-filter-buttons">
-            <button class="filter-btn active" data-filter="*">All</button>
-            <button class="filter-btn" data-filter=".web">Web</button>
-            <button class="filter-btn" data-filter=".mobile">Mobile</button>
-            <button class="filter-btn" data-filter=".logo">
+            <button class="filter-btn b active" data-filter="*">All</button>
+            <button class="filter-btn c" data-filter=".web">Web</button>
+            <button class="filter-btn c" data-filter=".mobile">Mobile</button>
+            <button class="filter-btn c" data-filter=".logo">
               Logo & Branding
             </button>
-            <button class="filter-btn" data-filter=".sosmed">Sosmed</button>
-            <button class="filter-btn" data-filter=".illustration">Illustration</button>
+            <button class="filter-btn c" data-filter=".sosmed">Sosmed</button>
+            <button class="filter-btn c" data-filter=".illustration">
+              Illustration
+            </button>
           </div>
           <!-- End of Project Filter Buttons -->
 
@@ -848,6 +850,18 @@
             id="project-container"
             class="row no-gutters bizagn--project-filter-items isotope"
           ></div>
+          <div class="btn-custom">
+            <div class="btn-group gap" role="group" aria-label="Basic example">
+              <button id="project-prev" type="button" class="prev-btn">
+                <i class="fa fa-angle-left"></i>
+                Previous
+              </button>
+              <button id="project-next" type="button" class="next-btn">
+                Next
+                <i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- <div class="container">
@@ -866,21 +880,7 @@
             <li class="page-item"><button class="page-link">Next</button></li>
           </ul>
         </nav> -->
-        <div class="">
-          <div class="">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button id="project-prev" type="button" class="btn btn-light">
-                Previous
-              </button>
-              <button id="project-next" type="button" class="btn btn-light">
-                Next
-              </button>
-            </div>
-            <!-- <button type="button" class="col-sm btn btn-dark mt-4">
-              Load More
-            </button> -->
-          </div>
-        </div>
+
         <!-- End of Project Filter -->
       </div>
     </section>

@@ -479,6 +479,14 @@ We may release future updates so it will overwrite this file. it's better and sa
     // this.classList.toggle("active");
   });
 
+  $(".bizagn--project-filter").on("click", "button.c", function () {
+    $(".btn-custom").addClass("hide");
+  });
+
+  $(".bizagn--project-filter").on("click", "button.b", function () {
+    $(".btn-custom").removeClass("hide");
+  });
+
   document.addEventListener("DOMContentLoaded", init_projects);
   $.ready(() => {});
   $("#project-prev").on("click", (e) => {

@@ -4062,3 +4062,31 @@ body {
   object-fit: cover;
   object-position: center;
 }
+.btn-custom {
+  margin-top: 5px;
+  display: flex;
+  place-content: center;
+}
+.prev-btn {
+  font-weight: 700 !important;
+  color: #fff;
+  opacity: 0.7;
+}
+.next-btn {
+  font-weight: 700 !important;
+  color: #feb700;
+}
+.btn-group .prev-btn:hover {
+  opacity: 1;
+  border-bottom: 1px solid #e53a1c;
+}
+.btn-group .next-btn:hover {
+  opacity: 1;
+  border-bottom: 1px solid #e53a1c;
+}
+.gap {
+  column-gap: 10px;
+}
+.hide {
+  display: none;
+}
