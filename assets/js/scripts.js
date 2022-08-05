@@ -657,7 +657,7 @@ We may release future updates so it will overwrite this file. it's better and sa
       },
     };
   }
-  function init_isotop(elementelement) {
+  function init_isotop(element) {
     /* 06: Isotope - Filter
     ==============================================*/
     let $grid = $(element).isotope({
@@ -678,7 +678,6 @@ We may release future updates so it will overwrite this file. it's better and sa
     $grid.imagesLoaded().progress(function () {
       $grid.isotope("layout");
     });
-    return $grid;
     return $grid;
   }
 })(jQuery);
