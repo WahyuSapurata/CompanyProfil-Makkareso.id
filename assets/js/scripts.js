@@ -596,7 +596,7 @@ We may release future updates so it will overwrite this file. it's better and sa
                     />
                     <div class="bizagn--filter-item-data">
                       <h4><a href="project-details.html"> Project ${value.id} </a></h4>
-                      <p>${value.cat}</p>
+                      <p>${value.auth}</p>
                       <a href="project-details.html"
                         ><img
                           src="/assets/images/project/arrow.svg"

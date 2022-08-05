@@ -184,5 +184,65 @@
 		"auth": "alif",
 		"cat": "logo",
 		"src": "assets/images/desain/alif/logo/9.jpg"
+	},
+	{
+		"id": 31,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/business-agency.png"
+	},
+	{
+		"id": 32,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/clash-royale.png"
+	},
+	{
+		"id": 33,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/digital-marketing.png"
+	},
+	{
+		"id": 34,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/foodhunt.png"
+	},
+	{
+		"id": 35,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/footbal-league.png"
+	},
+	{
+		"id": 36,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/game-search.png"
+	},
+	{
+		"id": 37,
+		"auth": "anas",
+		"cat": "web",
+		"src": "assets/images/desain/anas/web/landing-ada-ikan.png"
+	},
+	{
+		"id": 38,
+		"auth": "bro",
+		"cat": "web",
+		"src": "assets/images/desain/bro/web/WhatsApp Image 2022-08-04 at 22.33.27.jpeg"
+	},
+	{
+		"id": 39,
+		"auth": "saleh",
+		"cat": "web",
+		"src": "assets/images/desain/saleh/web/penentuan guru tetap.png"
+	},
+	{
+		"id": 40,
+		"auth": "saleh",
+		"cat": "web",
+		"src": "assets/images/desain/saleh/web/superiorcorn.png"
 	}
 ]
