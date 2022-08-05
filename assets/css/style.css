@@ -4044,6 +4044,9 @@ body {
   #team .slick-track {
     height: 255px;
   }
+  .slider .right {
+    display: none !important;
+  }
 }
 
 @media (min-width: 986px) {
@@ -4051,6 +4054,9 @@ body {
     display: none;
   }
   #team .hiden {
+    display: none;
+  }
+  .main-image {
     display: none;
   }
 }
