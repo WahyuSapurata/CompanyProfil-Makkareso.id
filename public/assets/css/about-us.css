@@ -1,0 +1,15 @@
+#hint .row {
+  gap: 100px;
+}
+.visi {
+}
+.misi ul {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  gap: 16px;
+}
+.misi li {
+  text-align: left;
+  list-style-type: disc;
+}
