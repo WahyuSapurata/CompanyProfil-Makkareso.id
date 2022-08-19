@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--favicon-->
+        <link
+            rel="icon"
+            href="/assets/images/logo-noname.png"
+            type="image/png"
+        />
+        <!-- loader-->
+        <link href="assets/css/pace.min.css" rel="stylesheet" />
+        <script src="assets/js/pace.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+        <link href="assets/css/app.css" rel="stylesheet" />
+        <link href="assets/css/icons.css" rel="stylesheet" />
+        <title>Makkareso - Login</title>
+    </head>
+
+    <body class="bg-lock-screen">
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div
+                class="authentication-lock-screen d-flex align-items-center justify-content-center"
+            >
+                <div class="card shadow-none bg-transparent">
+                    <div class="card-body p-md-5 text-center">
+                        <h2 class="text-white" id="clk"></h2>
+                        <h5 class="text-white" id="masehi"></h5>
+                        <div class="">
+                            <img
+                                src="/assets/images/logo-white.png"
+                                class="mt-2"
+                                width="180"
+                                alt=""
+                            />
+                        </div>
+                        <p class="mt-2 text-white">LOGIN</p>
+                        <form action="" class="form-login">
+                            <div class="mb-3 mt-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Username"
+                                />
+                            </div>
+                            <div class="mb-3 mt-3">
+                                <div
+                                    class="input-group"
+                                    id="show_hide_password"
+                                >
+                                    <input
+                                        type="password"
+                                        class="form-control border-end-0"
+                                        id="inputChoosePassword"
+                                        placeholder="Enter Password"
+                                    />
+                                    <a
+                                        href="javascript:;"
+                                        class="input-group-text bg-white"
+                                        ><i class="bx bx-hide"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-white">
+                                    Login
+                                </button>
+                            </div>
+                        </form>
+                        <p
+                            class="text-white mt-1 text-start"
+                            style="font-size: 13px"
+                        >
+                            Already have an account?
+                            <a href="sign-up.html">Sign in here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end wrapper -->
+        <!-- Bootstrap JS -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--plugins-->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+        <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+        <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <script type="text/javascript">
+            function pad(num) {
+                return ("0" + num).slice(-2);
+            }
+            function time1() {
+                var today = new Date(),
+                    h = today.getHours(),
+                    m = today.getMinutes(),
+                    s = today.getSeconds();
+                h = h % 12;
+                h = h ? h : 12; // the hour '0' should be '12'
+                clk.innerHTML =
+                    pad(h) +
+                    ":" +
+                    pad(m) +
+                    ":" +
+                    pad(s) +
+                    " " +
+                    (h >= 12 ? "PM" : "AM");
+            }
+            window.onload = function () {
+                var clk = document.getElementById("clk");
+                t = setInterval(time1, 500);
+            };
+        </script>
+        <script>
+            function createHexArray(n) {
+                this.length = n;
+                for (var i = 1; i <= n; i++) this[i] = i - 1;
+                this[11] = "A";
+                this[12] = "B";
+                this[13] = "C";
+                this[14] = "D";
+                this[15] = "E";
+                this[16] = "F";
+                return this;
+            }
+            hx = new createHexArray(16);
+
+            function convertToHex(x) {
+                var high = x / 16;
+                var s = high + "";
+                s = s.substring(0, 2);
+                high = parseInt(s, 10);
+                var left = hx[high + 1];
+                var low = x - high * 16;
+                s = low + "";
+                s = s.substring(0, 2);
+                low = parseInt(s, 10);
+                var right = hx[low + 1];
+                var string = left + "" + right;
+                return string;
+            }
+
+            function pelangi(text) {
+                text = text.substring(2, text.length - 3);
+                color_d1 = 255;
+                mul = color_d1 / text.length;
+                for (i = 0; i < text.length; i++) {
+                    color_d1 = 255 * Math.sin(i / (text.length / 3));
+                    ("255*Math.sin(i/(text.length/3))");
+                    color_h1 = convertToHex(color_d1);
+                    color_d2 = mul * i;
+                    color_h2 = convertToHex(color_d2);
+                    k = text.length;
+                    j = k - i;
+                    if (j < 0) j = 0;
+                    color_d3 = mul * j;
+                    color_h3 = convertToHex(color_d3);
+                    document.write(
+                        '<FONT COLOR="#' +
+                            color_h3 +
+                            color_h1 +
+                            color_h2 +
+                            '">' +
+                            text.substring(i, i + 1) +
+                            "</FONT>"
+                    );
+                }
+            }
+            var fixd;
+
+            function isGregLeapYear(year) {
+                return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+            }
+
+            function gregToFixed(year, month, day) {
+                var a = Math.floor((year - 1) / 4);
+                var b = Math.floor((year - 1) / 100);
+                var c = Math.floor((year - 1) / 400);
+                var d = Math.floor((367 * month - 362) / 12);
+                if (month <= 2) e = 0;
+                else if (month > 2 && isGregLeapYear(year)) e = -1;
+                else e = -2;
+                return 1 - 1 + 365 * (year - 1) + a - b + c + d + e + day;
+            }
+
+            function Hijri(year, month, day) {
+                this.year = year;
+                this.month = month;
+                this.day = day;
+                this.toFixed = hijriToFixed;
+                this.toString = hijriToString;
+            }
+
+            function hijriToFixed() {
+                return (
+                    this.day +
+                    Math.ceil(29.5 * (this.month - 1)) +
+                    (this.year - 1) * 354 +
+                    Math.floor((3 + 11 * this.year) / 30) +
+                    227015 -
+                    1
+                );
+            }
+
+            function hijriToString() {
+                var months = new Array(
+                    "Muharram",
+                    "Safar",
+                    "Rabiul Awal",
+                    "Rabiul Akhir",
+                    "Jumadilawal",
+                    "Jumadilakhir",
+                    "Rajab",
+                    "Sya'ban",
+                    "Ramadhan",
+                    "Syawal",
+                    "Zulqai'dah",
+                    "Zulhijjah"
+                );
+                return (
+                    this.day + " " + months[this.month - 1] + " " + this.year
+                );
+            }
+
+            function fixedToHijri(f) {
+                var i = new Hijri(1100, 1, 1);
+                i.year = Math.floor((30 * (f - 227015) + 10646) / 10631);
+                var i2 = new Hijri(i.year, 1, 1);
+                var m = Math.ceil((f - 29 - i2.toFixed()) / 29.5) + 1;
+                i.month = Math.min(m, 12);
+                i2.year = i.year;
+                i2.month = i.month;
+                i2.day = 1;
+                i.day = f - i2.toFixed() + 1;
+                return i;
+            }
+            var tod = new Date();
+            var weekday = new Array(
+                "Ahad",
+                "Senin",
+                "Selasa",
+                "Rabu",
+                "Kamis",
+                "Jum'at",
+                "Sabtu"
+            );
+            var monthname = new Array(
+                "Januari",
+                "Februari",
+                "Maret",
+                "April",
+                "Mei",
+                "Juni",
+                "Juli",
+                "Agustus",
+                "September",
+                "Oktober",
+                "November",
+                "Desember"
+            );
+            var y = tod.getFullYear();
+            var m = tod.getMonth();
+            var d = tod.getDate();
+            var dow = tod.getDay();
+            var msh = weekday[dow] + ", " + d + " " + monthname[m] + " " + y;
+            document.getElementById("masehi").innerHTML = msh;
+        </script>
+        <!--Password show & hide js -->
+        <script>
+            $(document).ready(function () {
+                $("#show_hide_password a").on("click", function (event) {
+                    event.preventDefault();
+                    if ($("#show_hide_password input").attr("type") == "text") {
+                        $("#show_hide_password input").attr("type", "password");
+                        $("#show_hide_password i").addClass("bx-hide");
+                        $("#show_hide_password i").removeClass("bx-show");
+                    } else if (
+                        $("#show_hide_password input").attr("type") ==
+                        "password"
+                    ) {
+                        $("#show_hide_password input").attr("type", "text");
+                        $("#show_hide_password i").removeClass("bx-hide");
+                        $("#show_hide_password i").addClass("bx-show");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
