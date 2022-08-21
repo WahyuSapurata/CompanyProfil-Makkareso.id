@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Admin;
+use App\Models\User;
 
-class AdminSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,12 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        //
+        User::factory()->create(
+        [
+            'username' => 'root',
+            'password' => '1234',
+            'role' => 'root',
+            'logged' => false
+        ]);
     }
 }
