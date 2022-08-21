@@ -1755,6 +1755,21 @@ input::placeholder {
     border-radius: 10px;
     cursor: pointer;
 }
+.img-plus {
+    display: grid;
+    place-items: center;
+}
+.img-plus label {
+    position: absolute;
+}
+.bx.bx-plus-circle {
+    font-size: 100px;
+    color: #fff;
+    /* display: none; */
+}
+/* .img-plus i.bx.bx-plus-circle:hover {
+    display: none;
+} */
 @media screen and (max-width: 1280px) {
     .email-header {
         height: auto;

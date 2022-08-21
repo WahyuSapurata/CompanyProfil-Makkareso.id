@@ -18,7 +18,30 @@
         <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
         <link href="assets/css/app.css" rel="stylesheet" />
         <link href="assets/css/icons.css" rel="stylesheet" />
+        <!-- SweetAlert2 -->
+        <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css" />
         <title>Makkareso - Login</title>
+        <script src="assets/js/jquery.min.js"></script>
+        <script>
+            let _token;
+            $.ajax({
+                type: "GET", //THIS NEEDS TO BE GET
+                url: "/api/admins/key",
+                success: function (data) {
+                    console.log(data);
+                    _token = data;
+                },
+            });
+            $.ajax({
+                type: "POST",
+                url: "/api/admins/auth",
+                data: { _token },
+                dataType: "JSON",
+                success: function (response) {
+                    location.assign("/admin/index.html");
+                },
+            });
+        </script>
     </head>
 
     <body class="bg-lock-screen">
@@ -44,9 +67,14 @@
                             <div class="mb-3 mt-3">
                                 <input
                                     type="text"
+                                    id="username"
                                     class="form-control"
                                     placeholder="Username"
                                 />
+                                <div
+                                    id="invalid-username"
+                                    class="invalid-feedback text-start"
+                                ></div>
                             </div>
                             <div class="mb-3 mt-3">
                                 <div
@@ -56,7 +84,7 @@
                                     <input
                                         type="password"
                                         class="form-control border-end-0"
-                                        id="inputChoosePassword"
+                                        id="password"
                                         placeholder="Enter Password"
                                     />
                                     <a
@@ -64,10 +92,18 @@
                                         class="input-group-text bg-white"
                                         ><i class="bx bx-hide"></i
                                     ></a>
+                                    <div
+                                        id="invalid-password"
+                                        class="invalid-feedback text-start"
+                                    ></div>
                                 </div>
                             </div>
                             <div class="d-grid">
-                                <button type="button" class="btn btn-white">
+                                <button
+                                    type="submit"
+                                    id="submit"
+                                    class="btn btn-white"
+                                >
                                     Login
                                 </button>
                             </div>
@@ -87,10 +123,10 @@
         <!-- Bootstrap JS -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <!--plugins-->
-        <script src="assets/js/jquery.min.js"></script>
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
         <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <script src="assets/sweetalert2/sweetalert2.min.js"></script>
         <script type="text/javascript">
             function pad(num) {
                 return ("0" + num).slice(-2);
@@ -287,6 +323,64 @@
                         $("#show_hide_password i").removeClass("bx-hide");
                         $("#show_hide_password i").addClass("bx-show");
                     }
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                let _token;
+                $.ajax({
+                    type: "GET", //THIS NEEDS TO BE GET
+                    url: "/api/admins/key",
+                    success: function (data) {
+                        console.log(data);
+                        _token = data;
+                    },
+                });
+
+                $("#submit").click(function (e) {
+                    e.preventDefault();
+                    var username = $("#username").val();
+                    var password = $("#password").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/admins/login",
+                        data: {
+                            _token,
+                            username,
+                            password,
+                        },
+                        dataType: "JSON",
+                        error: function (data) {
+                            console.log(data);
+                            if ("errors" in data.responseJSON) {
+                                if (
+                                    typeof data.responseJSON.errors == "object"
+                                ) {
+                                    for (const [key, value] of Object.entries(
+                                        data.responseJSON.errors
+                                    )) {
+                                        $(`#${key}`).addClass("is-invalid");
+                                        $(`#invalid-${key}`).text(
+                                            value.join(", ")
+                                        );
+                                    }
+                                } else {
+                                    Swal.fire({
+                                        position: "center",
+                                        icon: "error",
+                                        title: "Opps",
+                                        text: data.responseJSON.errors,
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                    });
+                                }
+                            }
+                        },
+                        success: function (response) {
+                            location.assign("/admin/index.html");
+                        },
+                    });
                 });
             });
         </script>

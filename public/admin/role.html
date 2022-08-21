@@ -23,6 +23,10 @@
             href="assets/plugins/metismenu/css/metisMenu.min.css"
             rel="stylesheet"
         />
+        <link
+            href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+            rel="stylesheet"
+        />
         <!-- loader-->
         <link href="assets/css/pace.min.css" rel="stylesheet" />
         <script src="assets/js/pace.min.js"></script>
@@ -35,7 +39,7 @@
         <link rel="stylesheet" href="assets/css/dark-theme.css" />
         <link rel="stylesheet" href="assets/css/semi-dark.css" />
         <link rel="stylesheet" href="assets/css/header-colors.css" />
-        <title>Syndron - Bootstrap5 Admin Template</title>
+        <title>Makkareso - Admin</title>
         <script src="assets/js/jquery.min.js"></script>
         <script>
             let _token;
@@ -91,7 +95,7 @@
                             <div class="menu-title">Dashboard</div>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="role.html">
                             <div class="parent-icon">
                                 <i class="bx bxs-user-account bx-tada"></i>
@@ -907,7 +911,9 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="javascript:;"
+                                    <a
+                                        class="dropdown-item"
+                                        href="user-profile.html"
                                         ><i class="bx bx-user"></i
                                         ><span>Profile</span></a
                                     >
@@ -933,164 +939,185 @@
             <!--start page wrapper -->
             <div class="page-wrapper">
                 <div class="page-content">
-                    <!--breadcrumb-->
-                    <div
-                        class="page-breadcrumb d-none d-sm-flex align-items-center mb-3"
-                    >
-                        <div class="breadcrumb-title pe-3">User Profile</div>
-                        <div class="ps-3">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0 p-0">
-                                    <li class="breadcrumb-item">
-                                        <a href="javascript:;"
-                                            ><i class="bx bx-home-alt"></i
-                                        ></a>
-                                    </li>
-                                    <li
-                                        class="breadcrumb-item active"
-                                        aria-current="page"
-                                    >
-                                        User Profilep
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                    <!--end breadcrumb-->
-                    <div class="container">
-                        <div class="main-body">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="card">
-                                        <div class="card-body" id="card-img">
-                                            <div
-                                                class="d-flex flex-column align-items-center text-center"
-                                            >
-                                                <div class="img-plus">
-                                                    <label for="file"
-                                                        ><i
-                                                            id="coba"
-                                                            class="bx bx-plus-circle bx-spin bx-rotate-90 d-none"
-                                                        >
-                                                            <input
-                                                                type="file"
-                                                                hidden
-                                                                id="file"
-                                                                onchange="gambar(this.files[0], '#foto')" /></i
-                                                    ></label>
-                                                    <img
-                                                        src="assets/images/avatars/avatar-2.png"
-                                                        alt="Admin"
-                                                        id="foto"
-                                                        class="rounded-circle p-1 bg-primary"
-                                                        width="110"
-                                                        height="110"
-                                                    />
-                                                </div>
-                                                <div class="mt-3">
-                                                    <h4 id="name"></h4>
-                                                    <p
-                                                        class="text-secondary mb-1"
-                                                    >
-                                                        Full Stack Developer
-                                                    </p>
-                                                    <button
-                                                        class="btn btn-primary"
-                                                    >
-                                                        Follow
-                                                    </button>
-                                                    <button
-                                                        class="btn btn-outline-primary"
-                                                    >
-                                                        Message
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Name</h6>
-                                                </div>
-                                                <div
-                                                    class="col-sm-9 text-secondary"
-                                                >
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="name"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Email</h6>
-                                                </div>
-                                                <div
-                                                    class="col-sm-9 text-secondary"
-                                                >
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="email"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">Phone</h6>
-                                                </div>
-                                                <div
-                                                    class="col-sm-9 text-secondary"
-                                                >
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="phone"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-3">
-                                                    <h6 class="mb-0">
-                                                        Username
-                                                    </h6>
-                                                </div>
-                                                <div
-                                                    class="col-sm-9 text-secondary"
-                                                >
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="username"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-3"></div>
-                                                <div
-                                                    class="col-sm-9 text-secondary"
-                                                >
-                                                    <input
-                                                        type="button"
-                                                        class="btn btn-primary px-4"
-                                                        value="Save Changes"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="card radius-5">
+                        <div
+                            class="card-header"
+                            style="background-color: #00233b"
+                        >
+                            <div
+                                class="fs-6 fw-bold text-white"
+                                style="text-align-last: justify"
+                            >
+                                Project
+                                <button
+                                    type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleExtraLargeModal"
+                                >
+                                    Tambah
+                                    <i class="bx bxs-add-to-queue bx-spin"></i>
+                                </button>
                             </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center fs-3">Wait</div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--end page wrapper -->
+            <!-- Modal -->
+            <div
+                class="modal fade"
+                id="exampleExtraLargeModal"
+                tabindex="-1"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Tambah Project</h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label"
+                                        >Image</label
+                                    >
+                                    <input
+                                        id="image-uploadify"
+                                        type="file"
+                                        accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf"
+                                        multiple
+                                    />
+                                </div>
+                                <img
+                                    src=""
+                                    id="foto"
+                                    width="100"
+                                    alt=""
+                                    class="mb-3"
+                                />
+                                <div class="mb-3">
+                                    <label for="title" class="form-label"
+                                        >Title</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="title"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label"
+                                        >Description</label
+                                    >
+                                    <textarea
+                                        id="mytextarea"
+                                        name="mytextarea"
+                                    ></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label"
+                                        >Category</label
+                                    >
+                                    <select
+                                        class="form-select mb-3"
+                                        aria-label="Default select example"
+                                    >
+                                        <option selected>-- Pilih --</option>
+                                        <option value="1">Web</option>
+                                        <option value="2">Mobile</option>
+                                        <option value="3">
+                                            Logo & Branding
+                                        </option>
+                                        <option value="3">Sosmed</option>
+                                        <option value="3">Ilustration</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label"
+                                        >Date</label
+                                    >
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        id="date"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="price" class="form-label"
+                                        >Price</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control rupiah"
+                                        id="price"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="duration" class="form-label"
+                                        >Duration</label
+                                    >
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="duration"
+                                            aria-label="Recipient's username"
+                                            aria-describedby="basic-addon2"
+                                        />
+                                        <span
+                                            class="input-group-text"
+                                            id="basic-addon2"
+                                            >days</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="client" class="form-label"
+                                        >Client</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="client"
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="designer" class="form-label"
+                                        >Designer</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="designer"
+                                    />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                Save changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--start overlay-->
             <div class="overlay toggle-icon"></div>
             <!--end overlay-->
@@ -1225,6 +1252,7 @@
                         </div>
                     </div>
                 </div>
+
                 <hr />
                 <h6 class="mb-0">Sidebar Backgrounds</h6>
                 <hr />
@@ -1289,12 +1317,15 @@
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
         <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+
+        <script src="assets/js/form-text-editor.js"></script>
         <!--app JS-->
         <script src="assets/js/app.js"></script>
         <script>
             $(document).ready(function () {
                 let _token;
-                var name = document.querySelectorAll("#name");
                 $.ajax({
                     type: "GET", //THIS NEEDS TO BE GET
                     url: "/api/admins/key",
@@ -1308,17 +1339,7 @@
                             dataType: "JSON",
                             success: function (response) {
                                 console.log(response);
-                                name.forEach((e) => {
-                                    e.textContent = response.data.name;
-                                });
-
-                                $("input#name").val(response.data.name);
-                                $("#email").val(response.data.email);
-                                $("#phone").val(response.data.phone);
-                                $("#username")
-                                    .val(response.data.username)
-                                    .attr("disabled", true)
-                                    .addClass("text-muted");
+                                $("#name").text(response.data.name);
                             },
                         });
                     },
@@ -1334,22 +1355,7 @@
                         },
                     });
                 });
-                $(".img-plus").hover(
-                    function () {
-                        $("#coba").removeClass("d-none");
-                        // $(".rounded-circle").addClass("opacity-25");
-                    },
-                    function () {
-                        $("#coba").addClass("d-none");
-                        // $(".rounded-circle").removeClass("opacity-25");
-                    }
-                );
             });
-        </script>
-        <script>
-            function gambar(file, id) {
-                $(id).attr("src", URL.createObjectURL(file));
-            }
         </script>
     </body>
 </html>

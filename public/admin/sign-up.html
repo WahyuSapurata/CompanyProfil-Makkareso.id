@@ -32,6 +32,28 @@
         <link href="assets/css/app.css" rel="stylesheet" />
         <link href="assets/css/icons.css" rel="stylesheet" />
         <title>Makkareso - Sign-Up</title>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script>
+            let _token;
+            $.ajax({
+                type: "GET", //THIS NEEDS TO BE GET
+                url: "/api/admins/key",
+                success: function (data) {
+                    console.log(data);
+                    _token = data;
+                },
+            });
+            $.ajax({
+                type: "POST",
+                url: "/api/admins/auth",
+                data: { _token },
+                dataType: "JSON",
+                success: function (response) {
+                    location.assign("/admin/index.html");
+                },
+            });
+        </script>
     </head>
 
     <body class="bg-login">
@@ -68,33 +90,42 @@
                                             <span>SIGN UP WITH EMAIL</span>
                                             <hr />
                                         </div>
+
                                         <div class="form-body">
                                             <form class="row g-3">
                                                 <div class="col-12">
                                                     <label
-                                                        for="inputFirstName"
+                                                        for="name"
                                                         class="form-label"
                                                         >Name</label
                                                     >
                                                     <input
-                                                        type="email"
+                                                        type="text"
                                                         class="form-control"
-                                                        id="inputFirstName"
+                                                        id="name"
                                                         placeholder="Name"
                                                     />
+                                                    <div
+                                                        id="invalid-name"
+                                                        class="invalid-feedback"
+                                                    ></div>
                                                 </div>
                                                 <div class="col-12">
                                                     <label
-                                                        for="inputEmailAddress"
+                                                        for="email"
                                                         class="form-label"
                                                         >Email Address</label
                                                     >
                                                     <input
                                                         type="email"
                                                         class="form-control"
-                                                        id="inputEmailAddress"
+                                                        id="email"
                                                         placeholder="example@user.com"
                                                     />
+                                                    <div
+                                                        id="invalid-email"
+                                                        class="invalid-feedback"
+                                                    ></div>
                                                 </div>
                                                 <div class="col-12">
                                                     <label
@@ -108,10 +139,14 @@
                                                         id="username"
                                                         placeholder="Enter Username"
                                                     />
+                                                    <div
+                                                        id="invalid-username"
+                                                        class="invalid-feedback"
+                                                    ></div>
                                                 </div>
                                                 <div class="col-12">
                                                     <label
-                                                        for="inputChoosePassword"
+                                                        for="password"
                                                         class="form-label"
                                                         >Password</label
                                                     >
@@ -122,7 +157,7 @@
                                                         <input
                                                             type="password"
                                                             class="form-control border-end-0"
-                                                            id="inputChoosePassword"
+                                                            id="password"
                                                             placeholder="Enter Password"
                                                         />
                                                         <a
@@ -132,12 +167,20 @@
                                                                 class="bx bx-hide"
                                                             ></i
                                                         ></a>
+                                                        <div
+                                                            id="invalid-password"
+                                                            class="invalid-feedback"
+                                                        >
+                                                            Please provide a
+                                                            valid city.
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
                                                         <button
-                                                            type="submit"
+                                                            type="button"
+                                                            id="submit"
                                                             class="btn btn-primary"
                                                         >
                                                             <i
@@ -162,10 +205,10 @@
         <!-- Bootstrap JS -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <!--plugins-->
-        <script src="assets/js/jquery.min.js"></script>
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
         <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+        <script src="assets/js/form-validations.js"></script>
         <!--Password show & hide js -->
         <script>
             $(document).ready(function () {
@@ -189,5 +232,60 @@
 
         <!--app JS-->
         <script src="assets/js/app.js"></script>
+        <script>
+            $(document).ready(function () {
+                let _token;
+                $.ajax({
+                    type: "GET", //THIS NEEDS TO BE GET
+                    url: "/api/admins/key",
+                    success: function (data) {
+                        console.log(data);
+                        _token = data;
+                    },
+                });
+
+                $("#submit").click(function () {
+                    for (const key of [
+                        "name",
+                        "email",
+                        "username",
+                        "password",
+                    ]) {
+                        $(`#${key}`).removeClass("is-invalid");
+                        $(`#invalid-${key}`).text("");
+                    }
+                    var name = $("#name").val();
+                    var email = $("#email").val();
+                    var username = $("#username").val();
+                    var password = $("#password").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/admins/register",
+                        data: {
+                            _token,
+                            name,
+                            email,
+                            username,
+                            password,
+                        },
+                        dataType: "JSON",
+                        error: function (data) {
+                            console.log(data);
+                            if ("errors" in data.responseJSON) {
+                                for (const [key, value] of Object.entries(
+                                    data.responseJSON.errors
+                                )) {
+                                    $(`#${key}`).addClass("is-invalid");
+                                    $(`#invalid-${key}`).text(value.join(", "));
+                                }
+                            }
+                        },
+                        success: function (response) {
+                            location.assign("/admin/index.html");
+                        },
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

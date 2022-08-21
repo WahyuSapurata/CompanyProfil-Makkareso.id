@@ -48,6 +48,27 @@
         <link rel="stylesheet" href="assets/css/semi-dark.css" />
         <link rel="stylesheet" href="assets/css/header-colors.css" />
         <title>Makkareso - Admin</title>
+        <script src="assets/js/jquery.min.js"></script>
+        <script>
+            let _token;
+            $.ajax({
+                type: "GET", //THIS NEEDS TO BE GET
+                url: "/api/admins/key",
+                success: function (data) {
+                    console.log(data);
+                    _token = data;
+                },
+            });
+            $.ajax({
+                type: "POST",
+                url: "/api/admins/auth",
+                data: { _token },
+                dataType: "JSON",
+                success: function (response) {
+                    console.log(response);
+                },
+            });
+        </script>
     </head>
 
     <body>
@@ -80,6 +101,14 @@
                                 ></i>
                             </div>
                             <div class="menu-title">Dashboard</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="role.html">
+                            <div class="parent-icon">
+                                <i class="bx bxs-user-account bx-tada"></i>
+                            </div>
+                            <div class="menu-title">Role</div>
                         </a>
                     </li>
                     <li class="active">
@@ -882,7 +911,7 @@
                                     alt="user avatar"
                                 />
                                 <div class="user-info ps-3">
-                                    <p class="user-name mb-0">Pauline Seitz</p>
+                                    <p class="user-name mb-0" id="name"></p>
                                     <p class="designattion mb-0">
                                         Web Designer
                                     </p>
@@ -890,40 +919,21 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
-                                    <a class="dropdown-item" href="javascript:;"
+                                    <a
+                                        class="dropdown-item"
+                                        href="user-profile.html"
                                         ><i class="bx bx-user"></i
                                         ><span>Profile</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:;"
-                                        ><i class="bx bx-cog"></i
-                                        ><span>Settings</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:;"
-                                        ><i class="bx bx-home-circle"></i
-                                        ><span>Dashboard</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:;"
-                                        ><i class="bx bx-dollar-circle"></i
-                                        ><span>Earnings</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="javascript:;"
-                                        ><i class="bx bx-download"></i
-                                        ><span>Downloads</span></a
                                     >
                                 </li>
                                 <li>
                                     <div class="dropdown-divider mb-0"></div>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="javascript:;"
+                                    <a
+                                        class="dropdown-item"
+                                        id="logout"
+                                        href="javascript:;"
                                         ><i class="bx bx-log-out-circle"></i
                                         ><span>Logout</span></a
                                     >
@@ -1312,15 +1322,12 @@
         <!-- Bootstrap JS -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <!--plugins-->
-        <script src="assets/js/jquery.min.js"></script>
         <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
         <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
         <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-        <script src="assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
         <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
         <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 
-        <script src="assets/js/index.js"></script>
         <script src="assets/js/form-text-editor.js"></script>
         <script
             src="https://cdn.tiny.cloud/1/vdqx2klew412up5bcbpwivg1th6nrh3murc6maz8bukgos4v/tinymce/5/tinymce.min.js"
@@ -1392,6 +1399,40 @@
             function gambar(file, id) {
                 $(id).attr("src", URL.createObjectURL(file));
             }
+        </script>
+        <script>
+            $(document).ready(function () {
+                let _token;
+                $.ajax({
+                    type: "GET", //THIS NEEDS TO BE GET
+                    url: "/api/admins/key",
+                    success: function (data) {
+                        console.log(data);
+                        _token = data;
+                        $.ajax({
+                            type: "POST",
+                            url: "/api/admins/auth",
+                            data: { _token },
+                            dataType: "JSON",
+                            success: function (response) {
+                                console.log(response);
+                                $("#name").text(response.data.name);
+                            },
+                        });
+                    },
+                });
+                $("#logout").click(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/admins/logout",
+                        data: { _token },
+                        dataType: "JSON",
+                        success: function (response) {
+                            location.assign("/admin/login.html");
+                        },
+                    });
+                });
+            });
         </script>
     </body>
 </html>
