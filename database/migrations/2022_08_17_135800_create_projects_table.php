@@ -20,10 +20,10 @@ return new class extends Migration
             $table->string("image");
             $table->string("title");
             $table->text('description');
-            $table->enum('categori', ['web', 'mobile', "logo", 'sosmed', 'illustration']);
+            $table->enum('category', ['web', 'mobile', "logo", 'sosmed', 'illustration']);
             $table->dateTime('date');
             $table->double('price', 8, 2, true)->unsigned();
-            $table->dateTime('duration');
+            $table->string('duration');
             $table->string("client");
             $table->string("designer");
 
