@@ -29,209 +29,6 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: api/admins/key
-    metadata:
-      title: 'Show the form for creating a new resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: Iei0M2ymxP0E6YuJ2ARELlm25PXPMihOgiRphnfK
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlFZR05MN21zemVhUWF4MnVCaFZmUEE9PSIsInZhbHVlIjoiWld1OStXU3Z3NVRoaVdSb1l3UXl1NWw5N2xHNkFObTVsdWN0QmJvWXBpbWdvdVdTUjl2aDdvRExXRU51TExxdHo4RUJBMWtFeFRORWZJTU10TWxBbFg4VEgvTVB6Z3dMaktRc3hhYlN2dVpGSlFaWFVMNEY0RFMvaHg5S0NzRWMiLCJtYWMiOiIzZDQ3MmExYTkxNDUwOWVhMDEyYmVhNGVmNWYwMDhkNWM0YmExMjQyNGE3ZjZlN2EwMGExMDAzNDJlOGRmNDFjIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; samesite=lax; makkareso_session=eyJpdiI6ImkreE5lK2EzWUlNQlZMYmRWUHo2MHc9PSIsInZhbHVlIjoiZmVFV01DYVA5ZFlIY3R0cnUrelZCV1VvMThicHJNbjlFMHlWVFFFYmRuQUdUT0d6Um1IYjV3ME1RNTZHcWVZb3hPRXJOZUIxVTdSczY2UFlBWXBqc1JmRDFMbmZDTkRiNy9SWWZrWlJ4OEd3ZWYzdDl0UVEyaU1RZElXeVNDQnYiLCJtYWMiOiIxMTJhNjA3YzMyNDE4ZTBlMjdkYzIxMDMxZTFiOWE3ZDc1NjRjYjA2OTM4MDk5M2IzYjhkNGY4YTlkOTYwOGFhIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6IlZTTzNBQWErMFpPOTNJMDM3dHlDOXc9PSIsInZhbHVlIjoiZTY3SlJ2SWg2YnZzMmN0b1JRK000WkpML2p2ZG9FMnpKRmREcmhOSjFtdmUrMzlScFlNYTVYcDB0RU14RExlMkJCbDJCTmJCdmk0cGR0VFBBcGZGd1JrUnRRRlJFS1BiQWIzajNqWFBRSnlHeUdyc2N2Sk1zRGk5d3pQM0JaK2ZVVUdGYUhYSnUwUFZac1pIa3FjZFF0Rk5qY1VxSWN5SEZZVzM5UzVGeTladURzWUVuNHRQZUgyVFlqTGZNSEwwcW1abnBJNU0zZWtBYjVTZ20zSXAxazBIOUNFV1JvR2FtUTVOOU5ZWUJadmRSbkxVV2hXVnpyTzR0TDZvSXV3SHpzS3h4dWdzc2trdC9kekRZL1h4bUYrRzM0bElCRGxyOCtISklkUmNwVFpkeDdsWWZBSVVkZlJCZjFLRWZ5YUdyTXcxNGdCZjM3aVYrd2QxOUx4dllxMUh6SExIamhnZGhkRnB3am1CNzZiM0NDVWErZWFQbCswKzZGa3l3R0ErIiwibWFjIjoiYjg5YThkZjA3ODhmNzZhZTYwMjU3NzkyYmE2Zjg1ZGM0ZDdmOWI4OWY2MmNlZDk3NGQwMTA0MDgzYjRiZDI2OCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/admins/register
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: ''
-        required: true
-        example: culpa
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: ocie52@example.org
-        type: string
-        custom: []
-      username:
-        name: username
-        description: 'Must be at least 8 characters.'
-        required: true
-        example: qziwobg
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'Must be at least 8 characters.'
-        required: true
-        example: mab
-        type: string
-        custom: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/admins/login
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/admins/logout
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - POST
-    uri: api/admins/auth
-    metadata:
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/admins/{id}'
-    metadata:
-      title: 'Display the specified resource.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 501
-        content: '"Not Implemented"'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ill6My80Zms1U2RXMnVmRWl3T2N5OXc9PSIsInZhbHVlIjoiUlFXNlVBTUF3VlhuS1p6UlFuVGJsZVlNREpmUjRSdml0K0JrdnZSa1g3RnZacVQ4djBMNlRjb3Z2UVNnZnRkckI5L2FPUXdvMmx6YUFUNzdXVXJ0TzdvZmZoQkwxWmxlK2s0eFM0L25tSDF6Q2pmZlhOYWR3UTRDcDM2cnpkUmMiLCJtYWMiOiI1MDZjZGE3ODNlYjhhZjkzZGM2OGUyOTViOWJjYjZjNDNlOTVmMjllNWZmZGRlODYxZmQ2MTU0ZWI5OWFjODlkIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; samesite=lax; makkareso_session=eyJpdiI6IkVxTDBKWEN5NlMzaHJFMUhoWk9wU0E9PSIsInZhbHVlIjoicU1mYmJoOXZZUG9BTm9ydFR3KzBSZ21IcGEydklteTRzTjNzRHI4Q2pLYUlRSEZqaXJ6TE41QU1wWGtDMTlkN3o4OVRnUGlLMTR3RlpLODhpNlRzV3FzYkU1cXRrR283UHNlYStEbmpGRmE2V29ZR2J0aXhiZG83aktsQUxqc1ciLCJtYWMiOiI5MzAzZjM5MzMzM2QzMDA2Mzg3ZjhhOWIzZDc0NjI5ZGU0YWU3YjJiYTBiNzQ1MDViMThhNTU4YmQ5MGMxNzk1IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6Inc5dGpBTHVqNkNFNzB2aklybGc3MHc9PSIsInZhbHVlIjoielZNTXR0TTNMR2wrc05RWTlyRFQyNDd2WVl1WXhqK3hzeEYyOU8waU9OMC9CWWRYS2dCV2JDbHRGbzRHenpXU1V6NDFBL1F2Uy9xeXBQNytxVDJjYXBzdW9nQWt1MkhGUzVONllTZDNFU29sKzVWalMvd2EyNmFRbk5pMUN3NGZqS0dVUTIveDBBTVhjQnd5WFQ3YkRkdFQyeHFta0h0Z055VXFYQlA1M3hORFpYWTRCUHM5Vkl1SWtkZFhmeW9WT0wvNE5VbW00SG5KelY0Ymxsd0V1b2VRUk5LZ0E1c25KOTRwU1VNWXZzS3JDMy9KanRLSDNWcS9IQWZkRnJ0TVlCRm9JUHc3d0gvc0tKbW8zYkdhRUxiaWhJZ3dRUi82b3c3Z2hxUlZwMXpOMnVjSFhoZllka2swdDlxYXUxLzVrNjMzTUpSM2JRUTVpcllFRFpRZTJucDlIT1RHM2VteUR1NkVKTk9RSFZhRlUzZjlHbWRCOVFISjFKMFF0NlVqIiwibWFjIjoiNTgzZTg1MGRlZTJjZTQxZDI2YTkxODlkY2YwZWM2YWM0NDc0YjI4OGY1MWQ3ZTljMDY0MTlhNjFmMWFiNjgxOCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6InV3QnM5dUVFbWwwRzV6QnJTVXFuN1E9PSIsInZhbHVlIjoiNVZQR3NldE9pbUlCMzkwTTh1TkkwSVpSb2Jrd2YzWXdMSUh6akRRRzJ2UmdkVVVSOUFVQm9BejN3anp0RUt6RGNwZW5yN2d1VWdzN0NWTDJVOXR5V3hkZGd2cjBYUmVDWjdvQ3V4bHJBNi9xaXBrQi9mU25hbVcyV3VEVzFxYnVFOTc3SE5VTWRVL2R6VUdmZnJaRVQ4aEZtWXJNMkxpdEdzWmlDZEhWdGc3STJ6RzllWkVDWXV0MnRVMVVaQTBPSjRiN0sybDlkNElLQnFGYVJWUFZsSU5MbzBGakZUOFFtcGVQRU5XYXUrTzdTcEMyRUpKWDE2NXliU0JxQmVIcEJlZ0dUblRPY2JrQzRVZTF6cGhWa0pkdCtKVTVoekZobGk3R3VjYU5rVEs2aTVnQW9XdUxmdThTN2ZqOVR4MnN5KzJoLzNFNldaeUEwRzhvYk1VWXpBYWlUZ3pxR3pxanFMYzZyOWRncTRxbHlvVG16emVMNWVVT1pBaDIvczk3IiwibWFjIjoiMzJlZDNkOThiNTE3Y2JkMTNkYjZmMmM5MzNlNzRkNjBjZWFjMzlhYzAyNWJhNDVkOGU4NGQ1YjA3YWY3Mzc5NCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax'
-        description: null
-    responseFields: []
-  -
-    httpMethods:
-      - PATCH
-    uri: 'api/admins/{id}'
-    metadata:
-      title: 'Update the specified resource in storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/admins/{id}'
-    metadata:
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: 1
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - GET
     uri: api/projects
     metadata:
       title: 'Display a listing of the resource.'
@@ -247,12 +44,13 @@ endpoints:
     responses:
       -
         status: 200
-        content: ''
+        content: '{"data":[{"id":6,"created_at":"2022-08-21T15:04:51.000000Z","updated_at":"2022-08-21T15:04:51.000000Z","image":"image.jpg","title":"title","description":"description description description","category":"web","date":"2022-08-21 00:00:00","price":"5000000","duration":"10 hari","client":"google","designer":"anas","published_at":"2022-08-21 00:00:00"}]}'
         headers:
-          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtBWkljVG94TTVydjdrTlIrSnVJRFE9PSIsInZhbHVlIjoiZnhjci91YU5uWC9lalZOLzZmNFVQemI2aWdJbHo2aHFXcEUybkRhaDhIaVN5aTBqcXJCeXlXdmw3bkh2RzU3MitFVHN3Rm1zVDhSSDAyUjRUa1lZeFVDNmpmWS81djNURmtGcVVJN0VUajF1VGZVRmFFZUxxM1FCdlpWV2xzUEwiLCJtYWMiOiJjMzI0YmNkYWNkYTJhMTk5OTRiY2M2YTc2YjM2OGRiNjJkY2E3NWUxZDZjNTEwZjFmMDIyMDZkN2E0OTQ1NzdhIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; samesite=lax; makkareso_session=eyJpdiI6InNOYjNUVzJkMzdreGtMSjZpQ0dXd2c9PSIsInZhbHVlIjoiREt1YjlpOS9iQXBONjhrZ1pQdFY4b2RKM0xKWGhFMW90YUdBTGtXazVySTNwVTkyKzlkVWhXTGUrWkJjMmYxU0s5ckhmamZZa3hPMWRDOWo5Q1lSSnBtSURtMUc1QW5CdGZhTW9CbUdyTVc1OUwwTnc4Si9oTnV1Q3Ixd05VY1ciLCJtYWMiOiI5ZTEwNGNiMTA3M2Y4ZjYyOGQ5MzYxMjczOWQ5ODg2M2MxOTM3ZTNjMTIxNTVhZjY3ZGY1ZDc1YWJhMjFkMzFjIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6Iks2SjVIVThZeDVYT1F1ZS9PK2tzVHc9PSIsInZhbHVlIjoiZ1ZaMUZNWWpEcm1iOE9CYTN4Ukt5MGVIR0cyMzZNK2lvanpQajNJUHREUnRlS0pUVkFsTHRhbUNpWVR1ZXlmaUdwYVFFQVFFUkpIYUNSQUVjQTNqb3BxRHhzdXFlSTRhTE1NNlZkNzZCa3N0bVVFbkZORlhoVzNmZ2pLVThIVGluSzIyUEtEV2xpeU1CK0xBcU9QcmdKQzJTSGtHYlJLOUx5MndDNDFuRTRQNncvaUpIWEt1c3oyK2tvY3dtb1c1ZWVZSjBONjBHRWpKUmU5bVBrNDhSTFluT0dPQUw3M0pQbzZCeXdtb3hFYW9MRVphNDg5V2w1WDF3RFBCUFFuUnpPNVNXNHhYNnZuYjRiZnZqRmtUM3VhRllWK3hObnczZlBoTkZETi9lb2o5YnNWTjdBSHlVVlBVRVJTaElQQ3F0T3d5N1R3T0pRaGp5QnNQcDVQaHdDcEhzOWYwQ08vQ0xGN2ZSK0ZkbzZnQWw1T0JxczRkeTdJb09tcUF5TlA1IiwibWFjIjoiNDI4OWJjOTZmNjhiNTg2YjUzNmIyNTU2MWJmMGQxMzhmN2MzM2MwMTJjMjFkNGQzYTIyZTYyYmU3YjJiMzJiNyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6IjVDSGRFS0N3bGVab2E4R25SWFI2M3c9PSIsInZhbHVlIjoiR1I4OHVYM0toQkVMS3dxZXhTVlg0V1NEQ0EzRVhkYlY4QlMyaG9DOU5od2hIUXJrRTdIOExHbjJUNmkreWk3SFp3RFdzcGRpNmRRdENoQ25wOHRDUnJJalA3NWNJUVY3dmRjMnZjR3ZQTzdDMTRLcFpIdnU3VlM3cUpxUXlvb1ZuU1NtSG43ZlQyS0pVblc0MjJjK29DQ2RPaEpnam1ldklFYkY3dXp5bXdUSlZvL0ZzTVQvK3RycXpURytBY3l4TTc3NlFhVTBNMVFBNGRrSlZlSERDa2t5d2wzS1NtZU1XU2hYR2RhRThXREdHQ2ptZkF6cWVnTXlzaU5Sa3BPZDgvMnlHT09XM1JmK2RVaXBaTUZOc29UUXM4cnh2K0R0ZXhrOUtDNHJ3MEhIa2RmbUdxYVZzWGRPaHliSEg3azR4ZTR0WklicUJsTjBmQ1g0ajNTc0l2R2RLMmRWenVRNDAwSmduVTdCWDFiajFySTdHcW5lWEgvRXNwUWYvUjFuIiwibWFjIjoiZTc0Mjg0ODE1MjRhNjg1YmFhNTgyN2RiOTZkMDhkYTMyNTY2NWQ0Njk5NjFjNTNkYWM2ZDJiNGUzMjgxYjEwMCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; pWY8oSY6l2lUFelRJwkmioMDNiak4M8x2OzAuaYr=eyJpdiI6Ik44RHRoY0hFOEIzcitFUmpZQ3hLaGc9PSIsInZhbHVlIjoic2RaUWdSbFVQb1BlWDhTYXVXYkpDR3NBRXpjUXZBeXF2dFRmMWI2dkdEeVJ6RVFGNXpDRDh5V01qTm1BN0NTNTBaamFSVkd4eUM2cXpEcWt6RHZ1dFIyZHZWT0ZxR0s1TUM0QjJTdm9iMW9LaUkvWVZxRTFOZ0FpNEZDR242YjlqTG1YK083YTJrTFg2eXV1TG5OTkVNdVhSbzJ0NFNEUExyZDcxMzR0RjJBT3hVeHA5alVqVVNQMkpPOHoxVGZCNG52R0lWdjJoOEtLWGJoNzR6cW9TRTNRUWZHS3VKQ3pzR1ZXSm8rMHYyZGZ6RFJiUUdXUis4NEtrM0pqcEt4WGZaNVFURFE3elVTOW52Y0RCRFRER2V4VFROT3REVWFacGJyd3kvaCs2dGJZOCtEUktoSTNnQW1BMzBrRG4yZWJEZzlUOTVYaVY1eDFyWFBEWHJrL1pCZE9lU1Nmc3FZczZ6Q2tKcUI3YWdWTldZTXBubkdqVFZuS25ocHkxTlprIiwibWFjIjoiMTNiMTlhMzk2OTIyMDMzMjIxYmZkNDQ0Yjg0N2E3MGQyMWJmNzI3MmMwNWI2NDFhOWFiMzA2ZDc1MjQyZDAzYiIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -296,13 +94,14 @@ endpoints:
     bodyParameters: []
     responses:
       -
-        status: 200
-        content: ''
+        status: 404
+        content: '{"message":"Not Found"}'
         headers:
-          content-type: 'text/html; charset=UTF-8'
           cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
-          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImoxSC9PWUxEN3JXM0hsZzNwb2s4cWc9PSIsInZhbHVlIjoiMXR1cm5Gc1plV2dDc04ybmtkUjlTd2t4LytxTmhpYzhNdVRobFNwNG5hb0NXSmM3WWNwRHp2a3FCNVV2STc4NUc4K25xUDZSQWZ5dEpTenhoeHI4Q0FuWUJHc050ZzFIVVhHaW5vTkZpT2E1Z2t0aE9YRXI5OUg3elFORm5HdGsiLCJtYWMiOiI3MTM1MGJlNDRjMTIxNjUyMTI1YjBhNDJkZDBkOTk1MjI0M2NhMDViNzM2NDVlZGEyMzdkODRmZGM4NDYwYzM1IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; samesite=lax; makkareso_session=eyJpdiI6Inpucm4rMVJ4LzdiZ0tmT0svTjVHUlE9PSIsInZhbHVlIjoia0hkTmw0amRLblhjc3FrTXhqMVQ0Q1UzaHpMbDVvdWFFcDZ4WjBGN1B2WWxTOTZtaHM1bjVyQ21lYitsVWFpNExEMUdEMFhNK2ZFRVozcjFTT0ZXeHVvZVlzVzBrbUR0TENYYllXWUVQMndMWnJnUzNCdC8wejRiVi9PSGVXRjQiLCJtYWMiOiI1NDJiMWNlYzFiYzRhNDkxMDhkMGRiZTQxMmQyYTI3OTg4YzYyZWY3YTA4OTIyZGYyMDIxYjI1MDAyNDM2NDU2IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6IjJ3c1hTZ0RpbmVZOGNoUFBsS3lmR3c9PSIsInZhbHVlIjoiLzQ2UktEUi9xU012OFZkNEQwc2hFSlZPWWpNd21oNmlhTlJMMlF1cUdTUU14ZXZnK3FzU2xVRjZkamdad1U1ekpxRGlsVnB1aDJvZ0VtVDZPejY4bVUvdks1M1VLYlc1bTVPZFFYanhIME1jNlZBSkxPQmYzU3g4Q0x0eVFVeDN5dzg1KytpZWJSY0oxdjBXa0ptNWN5akMyalNaa2lQUGhhU1Rvc05HUE9Ia1BjUW5yWFNZajljNldFM3Y1amwzdFZmNEFYcmhqSDZQNHJxWFhHak8xcUpiVVlGWWlmVGZuc0VPK1dMRkFJUDZGckRIdHZFcXBpOTl3aXdQMERTdjhwWFlFdXFCVVNMS1NTd2d0SHZaWFZMQUNiaDUzTG1ORHJMVHFTNS9QLytMa01wbC9Xa2UzMUlzQzBJdXFHRloyRUtOZDhka1hRVEJYL09UalZHMENydHppYU9xZEg5ZXpkeXlEOHVTc3hrMVdqSnpjOE83bTV3SWFDTUNSTExUIiwibWFjIjoiNDRjYmQwNGQyY2NiYjQ1ZTc0YWIwN2RhMGQzODc5MzljNjQyNzhiNGVhNmUwZGNkYjQyZTIwMTQ5MGJlNTQyMyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6IkRLblJhK3FndHpPZ0VXT0ZyeFJBVUE9PSIsInZhbHVlIjoiMktjMEdtMzNjeXg5enUzQWxiN1psbnptbEdXanJYbHQwWUVldUVtQVo1TFRKZWQ4Sy9DcG1JMElJQjJxZTdHazhmY05nTzJuTmZaTjVNY3p3NUdYelY0ZDdXZEwyZDVqNy9JdEhtYVFxUW5XTUhsL3JtR3NCLytVT2IzZFZFa0F5Z0FqWTNKYlZqMUYraVdmOUhCZFRRYk5CS0VQUE84SkswSnVTaFFreHcvUE1rUEFzcytjQ0tVMHQrYnlFZnZxR1RpS09nUG5wUHpnbXZCM2JIQW1WamdkL2Q4ZFN2WnBuNVJDNC9nbE9iamR3L2p3d2tvWlRXQWpuenN0UDVvbDZsYjV6Q0F0a3QyZGRiejJ2RHE2KzZFN2h1dDl2WllPcmFHaGg1ejJSaTZTa0NnWG0wKy9FNHFXUmJoQ2ZidVFnSzh6cUZnQzh1SHRTanhZOG5xaXJvNkZkaC9Da1lobXFFK1p0VW5uamJaMVVtY2I4NThwL2lMVC9KZUs5UUR6IiwibWFjIjoiYTY5MTdjNzE3MDQ0NjRiMDgyZTlhNTFiOTU3YTc2NDg1ZTU0ZTMxMGIwNjc1NzFlOTFhMWM4MzI4NjI1MGYzYyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; pWY8oSY6l2lUFelRJwkmioMDNiak4M8x2OzAuaYr=eyJpdiI6ImpDSGNvcGJYWFMwWTZEKzJBdXA4TWc9PSIsInZhbHVlIjoiVVpLZ2lNY2FNcU1qMVRNSkZNc21GYUVYRDZkdkZTdzdnWXJHSGtIcmZ6VlNRQzYwd0h4LzB4bnkzNDRrUWtGeFdYYy9MZlREMW9yTFdhUjRXMVp3OVBIZG5HWlNQLyt0M1lXRnAwSVJ1NWo1MHkvRDl5WWhTbDR1MDdkSGhpbmRHUUZHQy9iOFltYTlHVjZKNG5IWTVkNXJlYWN5c2t3aGN4WmV1RzJJdTlNUFEvWTdwQ2dIRU5DSWtUY2IvMDMxU0NNZ2s3QWN6NlB5bjNneFBmQnExR01GdDBQeXVNVUhmT0UrVmZEeENzMFJ6TlZVVXNadHpPbVNZWXRyb2F3N09LQkNqaVFYYkVuQ09FTmJteTFtb1VLTTAwZlZVUE5rckxaUklSSFl5cGY1NkMwTk1RMzVUSy9ycDdVa3FuWkRnWkNET3Q0NGswVnJtMzhWWkJvRHRVV21XQVRGZHcvQjFyZTRtR2Z3Y0x6M2N5Qkk2OUpXT2hOZDE0em1SUmwwIiwibWFjIjoiODc4YWY2OWFlZTQ0ZDM0MjI3MmZmOGVhZWY4ZjRkZDNmYzMzNDliOTRlMjk4NzFhMjM5NWVhMGVhNmFjZTgyYyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax; 0ttrQVBaBQMADZHyEifb60nFTB5VvA9POicuoYkC=eyJpdiI6Im93WW5qU2QwOW9yWE1WQzdNU3FLbmc9PSIsInZhbHVlIjoiVVBKb21BWEw0Z093d2V5c0kwMWNFY3JkdXJJRzR2OUFOMjR6WnJ1S3F2cmpBNlAraEV6ak82VFpSMWJ6a1czZXBEWFZVK3QySzA1MXZUVnVqRXdJTzQ1K1VqeUJ3eGI1NXJvMmN3NllEczh3ekU3ZWI3Ly85aldEMGVGaStEc2lZMFB3RzF0NjlDMFNOdmpoenllTHdHQ2dhbC92eElkTGZudVlyTk5MdGcxS0hlbDdmK1I4aGc0VEtULzROeXd5N2I1YmwrdHJkWjFHeWJNazJrV3YvMWJIaXVZWStEK2dseUEvYWt4YTYrd2UwTnAxUzNmcC9yN1QzdGYwY3lMUCtCTkw0Y3NNNXZLUlpFRE0wallMQi9nRG5EOVZRNkE2WGk5WXhINTZZcHJuenFKZklaczM2cUlmOXhBVW1WYWVRVERueHFwOXR3eUtJL3NsVlVqNGxieDQ0KzVJMFNTakxvVExRWDJVRVVxNHpUWFB5VzhTV3UzRjRVUmdoelBLIiwibWFjIjoiOWQ0Mzc5N2E2NjNhYjczOGQ1Y2E0NTQ3NjZkNGU4Yzg2MzhlZDM0ZjY3NTdiNjg2NzgxNzg3ODYxODZjZmI4MCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=/; httponly; samesite=lax'
         description: null
     responseFields: []
   -
@@ -323,7 +122,7 @@ endpoints:
         name: id
         description: 'The ID of the project.'
         required: true
-        example: 11
+        example: 6
         type: integer
         custom: []
     queryParameters: []
@@ -347,8 +146,555 @@ endpoints:
         name: id
         description: 'The ID of the project.'
         required: true
-        example: 18
+        example: 6
         type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/register
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/auth
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user/login
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/user/logout
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/user/update/{id}'
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the update.'
+        required: true
+        example: '1'
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/storage/local/{path}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      path:
+        name: path
+        description: ''
+        required: true
+        example: '?r"~?*\q9'
+        type: string
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 405
+        content: |-
+          {
+              "message": "The GET method is not supported for this route. Supported methods: PUT.",
+              "exception": "Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException",
+              "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php",
+              "line": 118,
+              "trace": [
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php",
+                      "line": 104,
+                      "function": "methodNotAllowed",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php",
+                      "line": 41,
+                      "function": "getRouteForMethods",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php",
+                      "line": 162,
+                      "function": "handleMatchedRoute",
+                      "class": "Illuminate\\Routing\\AbstractRouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 680,
+                      "function": "match",
+                      "class": "Illuminate\\Routing\\RouteCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 667,
+                      "function": "findRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 656,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 167,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 142,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 111,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 89,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 222,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 179,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 116,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 123,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 80,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 56,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 55,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 651,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 139,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/symfony/console/Command/Command.php",
+                      "line": 308,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 124,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/symfony/console/Application.php",
+                      "line": 998,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/symfony/console/Application.php",
+                      "line": 299,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/symfony/console/Application.php",
+                      "line": 171,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Console/Application.php",
+                      "line": 102,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 129,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/media/anas/Data/projects/main/makkareso.id/company-profile/artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          allow: PUT
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/storage/local
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/storage/local/{path}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      path:
+        name: path
+        description: ''
+        required: true
+        example: j
+        type: string
         custom: []
     queryParameters: []
     bodyParameters: []
