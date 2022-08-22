@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Makkareso",
-        "_postman_id": "a48fe633-c01e-48de-a686-a7767e057158",
+        "_postman_id": "cb11217c-771a-4cad-9efc-88c2fdbb5c19",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -68,305 +68,6 @@
                     ]
                 },
                 {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/key",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/key"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6IlFZR05MN21zemVhUWF4MnVCaFZmUEE9PSIsInZhbHVlIjoiWld1OStXU3Z3NVRoaVdSb1l3UXl1NWw5N2xHNkFObTVsdWN0QmJvWXBpbWdvdVdTUjl2aDdvRExXRU51TExxdHo4RUJBMWtFeFRORWZJTU10TWxBbFg4VEgvTVB6Z3dMaktRc3hhYlN2dVpGSlFaWFVMNEY0RFMvaHg5S0NzRWMiLCJtYWMiOiIzZDQ3MmExYTkxNDUwOWVhMDEyYmVhNGVmNWYwMDhkNWM0YmExMjQyNGE3ZjZlN2EwMGExMDAzNDJlOGRmNDFjIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; samesite=lax; makkareso_session=eyJpdiI6ImkreE5lK2EzWUlNQlZMYmRWUHo2MHc9PSIsInZhbHVlIjoiZmVFV01DYVA5ZFlIY3R0cnUrelZCV1VvMThicHJNbjlFMHlWVFFFYmRuQUdUT0d6Um1IYjV3ME1RNTZHcWVZb3hPRXJOZUIxVTdSczY2UFlBWXBqc1JmRDFMbmZDTkRiNy9SWWZrWlJ4OEd3ZWYzdDl0UVEyaU1RZElXeVNDQnYiLCJtYWMiOiIxMTJhNjA3YzMyNDE4ZTBlMjdkYzIxMDMxZTFiOWE3ZDc1NjRjYjA2OTM4MDk5M2IzYjhkNGY4YTlkOTYwOGFhIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6IlZTTzNBQWErMFpPOTNJMDM3dHlDOXc9PSIsInZhbHVlIjoiZTY3SlJ2SWg2YnZzMmN0b1JRK000WkpML2p2ZG9FMnpKRmREcmhOSjFtdmUrMzlScFlNYTVYcDB0RU14RExlMkJCbDJCTmJCdmk0cGR0VFBBcGZGd1JrUnRRRlJFS1BiQWIzajNqWFBRSnlHeUdyc2N2Sk1zRGk5d3pQM0JaK2ZVVUdGYUhYSnUwUFZac1pIa3FjZFF0Rk5qY1VxSWN5SEZZVzM5UzVGeTladURzWUVuNHRQZUgyVFlqTGZNSEwwcW1abnBJNU0zZWtBYjVTZ20zSXAxazBIOUNFV1JvR2FtUTVOOU5ZWUJadmRSbkxVV2hXVnpyTzR0TDZvSXV3SHpzS3h4dWdzc2trdC9kekRZL1h4bUYrRzM0bElCRGxyOCtISklkUmNwVFpkeDdsWWZBSVVkZlJCZjFLRWZ5YUdyTXcxNGdCZjM3aVYrd2QxOUx4dllxMUh6SExIamhnZGhkRnB3am1CNzZiM0NDVWErZWFQbCswKzZGa3l3R0ErIiwibWFjIjoiYjg5YThkZjA3ODhmNzZhZTYwMjU3NzkyYmE2Zjg1ZGM0ZDdmOWI4OWY2MmNlZDk3NGQwMTA0MDgzYjRiZDI2OCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "Iei0M2ymxP0E6YuJ2ARELlm25PXPMihOgiRphnfK",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "api\/admins\/register",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/register",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/register"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"culpa\",\"email\":\"ocie52@example.org\",\"username\":\"qziwobg\",\"password\":\"mab\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/admins\/login",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/admins\/logout",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/logout",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/logout"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/admins\/auth",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/auth",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/auth"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the specified resource.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the admin."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                },
-                                {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6Ill6My80Zms1U2RXMnVmRWl3T2N5OXc9PSIsInZhbHVlIjoiUlFXNlVBTUF3VlhuS1p6UlFuVGJsZVlNREpmUjRSdml0K0JrdnZSa1g3RnZacVQ4djBMNlRjb3Z2UVNnZnRkckI5L2FPUXdvMmx6YUFUNzdXVXJ0TzdvZmZoQkwxWmxlK2s0eFM0L25tSDF6Q2pmZlhOYWR3UTRDcDM2cnpkUmMiLCJtYWMiOiI1MDZjZGE3ODNlYjhhZjkzZGM2OGUyOTViOWJjYjZjNDNlOTVmMjllNWZmZGRlODYxZmQ2MTU0ZWI5OWFjODlkIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; samesite=lax; makkareso_session=eyJpdiI6IkVxTDBKWEN5NlMzaHJFMUhoWk9wU0E9PSIsInZhbHVlIjoicU1mYmJoOXZZUG9BTm9ydFR3KzBSZ21IcGEydklteTRzTjNzRHI4Q2pLYUlRSEZqaXJ6TE41QU1wWGtDMTlkN3o4OVRnUGlLMTR3RlpLODhpNlRzV3FzYkU1cXRrR283UHNlYStEbmpGRmE2V29ZR2J0aXhiZG83aktsQUxqc1ciLCJtYWMiOiI5MzAzZjM5MzMzM2QzMDA2Mzg3ZjhhOWIzZDc0NjI5ZGU0YWU3YjJiYTBiNzQ1MDViMThhNTU4YmQ5MGMxNzk1IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6Inc5dGpBTHVqNkNFNzB2aklybGc3MHc9PSIsInZhbHVlIjoielZNTXR0TTNMR2wrc05RWTlyRFQyNDd2WVl1WXhqK3hzeEYyOU8waU9OMC9CWWRYS2dCV2JDbHRGbzRHenpXU1V6NDFBL1F2Uy9xeXBQNytxVDJjYXBzdW9nQWt1MkhGUzVONllTZDNFU29sKzVWalMvd2EyNmFRbk5pMUN3NGZqS0dVUTIveDBBTVhjQnd5WFQ3YkRkdFQyeHFta0h0Z055VXFYQlA1M3hORFpYWTRCUHM5Vkl1SWtkZFhmeW9WT0wvNE5VbW00SG5KelY0Ymxsd0V1b2VRUk5LZ0E1c25KOTRwU1VNWXZzS3JDMy9KanRLSDNWcS9IQWZkRnJ0TVlCRm9JUHc3d0gvc0tKbW8zYkdhRUxiaWhJZ3dRUi82b3c3Z2hxUlZwMXpOMnVjSFhoZllka2swdDlxYXUxLzVrNjMzTUpSM2JRUTVpcllFRFpRZTJucDlIT1RHM2VteUR1NkVKTk9RSFZhRlUzZjlHbWRCOVFISjFKMFF0NlVqIiwibWFjIjoiNTgzZTg1MGRlZTJjZTQxZDI2YTkxODlkY2YwZWM2YWM0NDc0YjI4OGY1MWQ3ZTljMDY0MTlhNjFmMWFiNjgxOCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6InV3QnM5dUVFbWwwRzV6QnJTVXFuN1E9PSIsInZhbHVlIjoiNVZQR3NldE9pbUlCMzkwTTh1TkkwSVpSb2Jrd2YzWXdMSUh6akRRRzJ2UmdkVVVSOUFVQm9BejN3anp0RUt6RGNwZW5yN2d1VWdzN0NWTDJVOXR5V3hkZGd2cjBYUmVDWjdvQ3V4bHJBNi9xaXBrQi9mU25hbVcyV3VEVzFxYnVFOTc3SE5VTWRVL2R6VUdmZnJaRVQ4aEZtWXJNMkxpdEdzWmlDZEhWdGc3STJ6RzllWkVDWXV0MnRVMVVaQTBPSjRiN0sybDlkNElLQnFGYVJWUFZsSU5MbzBGakZUOFFtcGVQRU5XYXUrTzdTcEMyRUpKWDE2NXliU0JxQmVIcEJlZ0dUblRPY2JrQzRVZTF6cGhWa0pkdCtKVTVoekZobGk3R3VjYU5rVEs2aTVnQW9XdUxmdThTN2ZqOVR4MnN5KzJoLzNFNldaeUEwRzhvYk1VWXpBYWlUZ3pxR3pxanFMYzZyOWRncTRxbHlvVG16emVMNWVVT1pBaDIvczk3IiwibWFjIjoiMzJlZDNkOThiNTE3Y2JkMTNkYjZmMmM5MzNlNzRkNjBjZWFjMzlhYzAyNWJhNDVkOGU4NGQ1YjA3YWY3Mzc5NCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax"
-                                }
-                            ],
-                            "code": 501,
-                            "body": "\"Not Implemented\"",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the admin."
-                                }
-                            ]
-                        },
-                        "method": "PATCH",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/admins\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/admins\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "1",
-                                    "description": "The ID of the admin."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
                     "name": "Display a listing of the resource.",
                     "request": {
                         "url": {
@@ -396,24 +97,28 @@
                         {
                             "header": [
                                 {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImtBWkljVG94TTVydjdrTlIrSnVJRFE9PSIsInZhbHVlIjoiZnhjci91YU5uWC9lalZOLzZmNFVQemI2aWdJbHo2aHFXcEUybkRhaDhIaVN5aTBqcXJCeXlXdmw3bkh2RzU3MitFVHN3Rm1zVDhSSDAyUjRUa1lZeFVDNmpmWS81djNURmtGcVVJN0VUajF1VGZVRmFFZUxxM1FCdlpWV2xzUEwiLCJtYWMiOiJjMzI0YmNkYWNkYTJhMTk5OTRiY2M2YTc2YjM2OGRiNjJkY2E3NWUxZDZjNTEwZjFmMDIyMDZkN2E0OTQ1NzdhIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; samesite=lax; makkareso_session=eyJpdiI6InNOYjNUVzJkMzdreGtMSjZpQ0dXd2c9PSIsInZhbHVlIjoiREt1YjlpOS9iQXBONjhrZ1pQdFY4b2RKM0xKWGhFMW90YUdBTGtXazVySTNwVTkyKzlkVWhXTGUrWkJjMmYxU0s5ckhmamZZa3hPMWRDOWo5Q1lSSnBtSURtMUc1QW5CdGZhTW9CbUdyTVc1OUwwTnc4Si9oTnV1Q3Ixd05VY1ciLCJtYWMiOiI5ZTEwNGNiMTA3M2Y4ZjYyOGQ5MzYxMjczOWQ5ODg2M2MxOTM3ZTNjMTIxNTVhZjY3ZGY1ZDc1YWJhMjFkMzFjIiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6Iks2SjVIVThZeDVYT1F1ZS9PK2tzVHc9PSIsInZhbHVlIjoiZ1ZaMUZNWWpEcm1iOE9CYTN4Ukt5MGVIR0cyMzZNK2lvanpQajNJUHREUnRlS0pUVkFsTHRhbUNpWVR1ZXlmaUdwYVFFQVFFUkpIYUNSQUVjQTNqb3BxRHhzdXFlSTRhTE1NNlZkNzZCa3N0bVVFbkZORlhoVzNmZ2pLVThIVGluSzIyUEtEV2xpeU1CK0xBcU9QcmdKQzJTSGtHYlJLOUx5MndDNDFuRTRQNncvaUpIWEt1c3oyK2tvY3dtb1c1ZWVZSjBONjBHRWpKUmU5bVBrNDhSTFluT0dPQUw3M0pQbzZCeXdtb3hFYW9MRVphNDg5V2w1WDF3RFBCUFFuUnpPNVNXNHhYNnZuYjRiZnZqRmtUM3VhRllWK3hObnczZlBoTkZETi9lb2o5YnNWTjdBSHlVVlBVRVJTaElQQ3F0T3d5N1R3T0pRaGp5QnNQcDVQaHdDcEhzOWYwQ08vQ0xGN2ZSK0ZkbzZnQWw1T0JxczRkeTdJb09tcUF5TlA1IiwibWFjIjoiNDI4OWJjOTZmNjhiNTg2YjUzNmIyNTU2MWJmMGQxMzhmN2MzM2MwMTJjMjFkNGQzYTIyZTYyYmU3YjJiMzJiNyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6IjVDSGRFS0N3bGVab2E4R25SWFI2M3c9PSIsInZhbHVlIjoiR1I4OHVYM0toQkVMS3dxZXhTVlg0V1NEQ0EzRVhkYlY4QlMyaG9DOU5od2hIUXJrRTdIOExHbjJUNmkreWk3SFp3RFdzcGRpNmRRdENoQ25wOHRDUnJJalA3NWNJUVY3dmRjMnZjR3ZQTzdDMTRLcFpIdnU3VlM3cUpxUXlvb1ZuU1NtSG43ZlQyS0pVblc0MjJjK29DQ2RPaEpnam1ldklFYkY3dXp5bXdUSlZvL0ZzTVQvK3RycXpURytBY3l4TTc3NlFhVTBNMVFBNGRrSlZlSERDa2t5d2wzS1NtZU1XU2hYR2RhRThXREdHQ2ptZkF6cWVnTXlzaU5Sa3BPZDgvMnlHT09XM1JmK2RVaXBaTUZOc29UUXM4cnh2K0R0ZXhrOUtDNHJ3MEhIa2RmbUdxYVZzWGRPaHliSEg3azR4ZTR0WklicUJsTjBmQ1g0ajNTc0l2R2RLMmRWenVRNDAwSmduVTdCWDFiajFySTdHcW5lWEgvRXNwUWYvUjFuIiwibWFjIjoiZTc0Mjg0ODE1MjRhNjg1YmFhNTgyN2RiOTZkMDhkYTMyNTY2NWQ0Njk5NjFjNTNkYWM2ZDJiNGUzMjgxYjEwMCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; pWY8oSY6l2lUFelRJwkmioMDNiak4M8x2OzAuaYr=eyJpdiI6Ik44RHRoY0hFOEIzcitFUmpZQ3hLaGc9PSIsInZhbHVlIjoic2RaUWdSbFVQb1BlWDhTYXVXYkpDR3NBRXpjUXZBeXF2dFRmMWI2dkdEeVJ6RVFGNXpDRDh5V01qTm1BN0NTNTBaamFSVkd4eUM2cXpEcWt6RHZ1dFIyZHZWT0ZxR0s1TUM0QjJTdm9iMW9LaUkvWVZxRTFOZ0FpNEZDR242YjlqTG1YK083YTJrTFg2eXV1TG5OTkVNdVhSbzJ0NFNEUExyZDcxMzR0RjJBT3hVeHA5alVqVVNQMkpPOHoxVGZCNG52R0lWdjJoOEtLWGJoNzR6cW9TRTNRUWZHS3VKQ3pzR1ZXSm8rMHYyZGZ6RFJiUUdXUis4NEtrM0pqcEt4WGZaNVFURFE3elVTOW52Y0RCRFRER2V4VFROT3REVWFacGJyd3kvaCs2dGJZOCtEUktoSTNnQW1BMzBrRG4yZWJEZzlUOTVYaVY1eDFyWFBEWHJrL1pCZE9lU1Nmc3FZczZ6Q2tKcUI3YWdWTldZTXBubkdqVFZuS25ocHkxTlprIiwibWFjIjoiMTNiMTlhMzk2OTIyMDMzMjIxYmZkNDQ0Yjg0N2E3MGQyMWJmNzI3MmMwNWI2NDFhOWFiMzA2ZDc1MjQyZDAzYiIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax"
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
                                 }
                             ],
                             "code": 200,
-                            "body": "",
+                            "body": "{\"data\":[{\"id\":6,\"created_at\":\"2022-08-21T15:04:51.000000Z\",\"updated_at\":\"2022-08-21T15:04:51.000000Z\",\"image\":\"image.jpg\",\"title\":\"title\",\"description\":\"description description description\",\"category\":\"web\",\"date\":\"2022-08-21 00:00:00\",\"price\":\"5000000\",\"duration\":\"10 hari\",\"client\":\"google\",\"designer\":\"anas\",\"published_at\":\"2022-08-21 00:00:00\"}]}",
                             "name": ""
                         }
                     ]
@@ -484,24 +189,28 @@
                         {
                             "header": [
                                 {
-                                    "key": "content-type",
-                                    "value": "text\/html; charset=UTF-8"
-                                },
-                                {
                                     "key": "cache-control",
                                     "value": "no-cache, private"
                                 },
                                 {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
+                                    "key": "content-type",
+                                    "value": "application\/json"
                                 },
                                 {
-                                    "key": "set-cookie",
-                                    "value": "XSRF-TOKEN=eyJpdiI6ImoxSC9PWUxEN3JXM0hsZzNwb2s4cWc9PSIsInZhbHVlIjoiMXR1cm5Gc1plV2dDc04ybmtkUjlTd2t4LytxTmhpYzhNdVRobFNwNG5hb0NXSmM3WWNwRHp2a3FCNVV2STc4NUc4K25xUDZSQWZ5dEpTenhoeHI4Q0FuWUJHc050ZzFIVVhHaW5vTkZpT2E1Z2t0aE9YRXI5OUg3elFORm5HdGsiLCJtYWMiOiI3MTM1MGJlNDRjMTIxNjUyMTI1YjBhNDJkZDBkOTk1MjI0M2NhMDViNzM2NDVlZGEyMzdkODRmZGM4NDYwYzM1IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; samesite=lax; makkareso_session=eyJpdiI6Inpucm4rMVJ4LzdiZ0tmT0svTjVHUlE9PSIsInZhbHVlIjoia0hkTmw0amRLblhjc3FrTXhqMVQ0Q1UzaHpMbDVvdWFFcDZ4WjBGN1B2WWxTOTZtaHM1bjVyQ21lYitsVWFpNExEMUdEMFhNK2ZFRVozcjFTT0ZXeHVvZVlzVzBrbUR0TENYYllXWUVQMndMWnJnUzNCdC8wejRiVi9PSGVXRjQiLCJtYWMiOiI1NDJiMWNlYzFiYzRhNDkxMDhkMGRiZTQxMmQyYTI3OTg4YzYyZWY3YTA4OTIyZGYyMDIxYjI1MDAyNDM2NDU2IiwidGFnIjoiIn0%3D; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; 2obsErwY61DtGgY2Qn0kZRI0lfNCulMbWryFFn6x=eyJpdiI6IjJ3c1hTZ0RpbmVZOGNoUFBsS3lmR3c9PSIsInZhbHVlIjoiLzQ2UktEUi9xU012OFZkNEQwc2hFSlZPWWpNd21oNmlhTlJMMlF1cUdTUU14ZXZnK3FzU2xVRjZkamdad1U1ekpxRGlsVnB1aDJvZ0VtVDZPejY4bVUvdks1M1VLYlc1bTVPZFFYanhIME1jNlZBSkxPQmYzU3g4Q0x0eVFVeDN5dzg1KytpZWJSY0oxdjBXa0ptNWN5akMyalNaa2lQUGhhU1Rvc05HUE9Ia1BjUW5yWFNZajljNldFM3Y1amwzdFZmNEFYcmhqSDZQNHJxWFhHak8xcUpiVVlGWWlmVGZuc0VPK1dMRkFJUDZGckRIdHZFcXBpOTl3aXdQMERTdjhwWFlFdXFCVVNMS1NTd2d0SHZaWFZMQUNiaDUzTG1ORHJMVHFTNS9QLytMa01wbC9Xa2UzMUlzQzBJdXFHRloyRUtOZDhka1hRVEJYL09UalZHMENydHppYU9xZEg5ZXpkeXlEOHVTc3hrMVdqSnpjOE83bTV3SWFDTUNSTExUIiwibWFjIjoiNDRjYmQwNGQyY2NiYjQ1ZTc0YWIwN2RhMGQzODc5MzljNjQyNzhiNGVhNmUwZGNkYjQyZTIwMTQ5MGJlNTQyMyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; U6yTZ0dmaxPUl1Al8uVdihNpbsHhnfAIexHQtsHb=eyJpdiI6IkRLblJhK3FndHpPZ0VXT0ZyeFJBVUE9PSIsInZhbHVlIjoiMktjMEdtMzNjeXg5enUzQWxiN1psbnptbEdXanJYbHQwWUVldUVtQVo1TFRKZWQ4Sy9DcG1JMElJQjJxZTdHazhmY05nTzJuTmZaTjVNY3p3NUdYelY0ZDdXZEwyZDVqNy9JdEhtYVFxUW5XTUhsL3JtR3NCLytVT2IzZFZFa0F5Z0FqWTNKYlZqMUYraVdmOUhCZFRRYk5CS0VQUE84SkswSnVTaFFreHcvUE1rUEFzcytjQ0tVMHQrYnlFZnZxR1RpS09nUG5wUHpnbXZCM2JIQW1WamdkL2Q4ZFN2WnBuNVJDNC9nbE9iamR3L2p3d2tvWlRXQWpuenN0UDVvbDZsYjV6Q0F0a3QyZGRiejJ2RHE2KzZFN2h1dDl2WllPcmFHaGg1ejJSaTZTa0NnWG0wKy9FNHFXUmJoQ2ZidVFnSzh6cUZnQzh1SHRTanhZOG5xaXJvNkZkaC9Da1lobXFFK1p0VW5uamJaMVVtY2I4NThwL2lMVC9KZUs5UUR6IiwibWFjIjoiYTY5MTdjNzE3MDQ0NjRiMDgyZTlhNTFiOTU3YTc2NDg1ZTU0ZTMxMGIwNjc1NzFlOTFhMWM4MzI4NjI1MGYzYyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; pWY8oSY6l2lUFelRJwkmioMDNiak4M8x2OzAuaYr=eyJpdiI6ImpDSGNvcGJYWFMwWTZEKzJBdXA4TWc9PSIsInZhbHVlIjoiVVpLZ2lNY2FNcU1qMVRNSkZNc21GYUVYRDZkdkZTdzdnWXJHSGtIcmZ6VlNRQzYwd0h4LzB4bnkzNDRrUWtGeFdYYy9MZlREMW9yTFdhUjRXMVp3OVBIZG5HWlNQLyt0M1lXRnAwSVJ1NWo1MHkvRDl5WWhTbDR1MDdkSGhpbmRHUUZHQy9iOFltYTlHVjZKNG5IWTVkNXJlYWN5c2t3aGN4WmV1RzJJdTlNUFEvWTdwQ2dIRU5DSWtUY2IvMDMxU0NNZ2s3QWN6NlB5bjNneFBmQnExR01GdDBQeXVNVUhmT0UrVmZEeENzMFJ6TlZVVXNadHpPbVNZWXRyb2F3N09LQkNqaVFYYkVuQ09FTmJteTFtb1VLTTAwZlZVUE5rckxaUklSSFl5cGY1NkMwTk1RMzVUSy9ycDdVa3FuWkRnWkNET3Q0NGswVnJtMzhWWkJvRHRVV21XQVRGZHcvQjFyZTRtR2Z3Y0x6M2N5Qkk2OUpXT2hOZDE0em1SUmwwIiwibWFjIjoiODc4YWY2OWFlZTQ0ZDM0MjI3MmZmOGVhZWY4ZjRkZDNmYzMzNDliOTRlMjk4NzFhMjM5NWVhMGVhNmFjZTgyYyIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax; 0ttrQVBaBQMADZHyEifb60nFTB5VvA9POicuoYkC=eyJpdiI6Im93WW5qU2QwOW9yWE1WQzdNU3FLbmc9PSIsInZhbHVlIjoiVVBKb21BWEw0Z093d2V5c0kwMWNFY3JkdXJJRzR2OUFOMjR6WnJ1S3F2cmpBNlAraEV6ak82VFpSMWJ6a1czZXBEWFZVK3QySzA1MXZUVnVqRXdJTzQ1K1VqeUJ3eGI1NXJvMmN3NllEczh3ekU3ZWI3Ly85aldEMGVGaStEc2lZMFB3RzF0NjlDMFNOdmpoenllTHdHQ2dhbC92eElkTGZudVlyTk5MdGcxS0hlbDdmK1I4aGc0VEtULzROeXd5N2I1YmwrdHJkWjFHeWJNazJrV3YvMWJIaXVZWStEK2dseUEvYWt4YTYrd2UwTnAxUzNmcC9yN1QzdGYwY3lMUCtCTkw0Y3NNNXZLUlpFRE0wallMQi9nRG5EOVZRNkE2WGk5WXhINTZZcHJuenFKZklaczM2cUlmOXhBVW1WYWVRVERueHFwOXR3eUtJL3NsVlVqNGxieDQ0KzVJMFNTakxvVExRWDJVRVVxNHpUWFB5VzhTV3UzRjRVUmdoelBLIiwibWFjIjoiOWQ0Mzc5N2E2NjNhYjczOGQ1Y2E0NTQ3NjZkNGU4Yzg2MzhlZDM0ZjY3NTdiNjg2NzgxNzg3ODYxODZjZmI4MCIsInRhZyI6IiJ9; expires=Fri, 19 Aug 2022 15:25:07 GMT; Max-Age=120; path=\/; httponly; samesite=lax"
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
                                 }
                             ],
-                            "code": 200,
-                            "body": "",
+                            "code": 404,
+                            "body": "{\"message\":\"Not Found\"}",
                             "name": ""
                         }
                     ]
@@ -518,7 +227,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "6",
                                     "description": "The ID of the project."
                                 }
                             ]
@@ -554,8 +263,320 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "6",
                                     "description": "The ID of the project."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user\/register",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/register",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user\/auth",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/auth",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/auth"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/user\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/user\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user\/update\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user\/update\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the update."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/storage\/local\/{path}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/storage\/local\/:path",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/storage\/local\/:path",
+                            "variable": [
+                                {
+                                    "id": "path",
+                                    "key": "path",
+                                    "value": "%3Fr%22%7E%3F%2A%5Cq9",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "allow",
+                                    "value": "PUT"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 405,
+                            "body": "{\n    \"message\": \"The GET method is not supported for this route. Supported methods: PUT.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\MethodNotAllowedHttpException\",\n    \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php\",\n    \"line\": 118,\n    \"trace\": [\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php\",\n            \"line\": 104,\n            \"function\": \"methodNotAllowed\",\n            \"class\": \"Illuminate\\\\Routing\\\\AbstractRouteCollection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php\",\n            \"line\": 41,\n            \"function\": \"getRouteForMethods\",\n            \"class\": \"Illuminate\\\\Routing\\\\AbstractRouteCollection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/RouteCollection.php\",\n            \"line\": 162,\n            \"function\": \"handleMatchedRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\AbstractRouteCollection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 680,\n            \"function\": \"match\",\n            \"class\": \"Illuminate\\\\Routing\\\\RouteCollection\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 667,\n            \"function\": \"findRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php\",\n            \"line\": 656,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Http\/Middleware\/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 89,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Strategies\/Responses\/ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 222,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 179,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Extracting\/Extractor.php\",\n            \"line\": 116,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 123,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 80,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/GroupedEndpoints\/GroupedEndpointsFromApp.php\",\n            \"line\": 56,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/knuckleswtf\/scribe\/src\/Commands\/GenerateDocumentation.php\",\n            \"line\": 55,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php\",\n            \"line\": 651,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 139,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/symfony\/console\/Command\/Command.php\",\n            \"line\": 308,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php\",\n            \"line\": 124,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 998,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 299,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/symfony\/console\/Application.php\",\n            \"line\": 171,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php\",\n            \"line\": 102,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php\",\n            \"line\": 129,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"\/media\/anas\/Data\/projects\/main\/makkareso.id\/company-profile\/artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/storage\/local",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/storage\/local",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/storage\/local"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/storage\/local\/{path}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/storage\/local\/:path",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/storage\/local\/:path",
+                            "variable": [
+                                {
+                                    "id": "path",
+                                    "key": "path",
+                                    "value": "j",
+                                    "description": ""
                                 }
                             ]
                         },

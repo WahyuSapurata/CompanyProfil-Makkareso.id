@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use Illuminate\Support\Arr;
 
 class ProjectController extends Controller
 {
@@ -29,7 +30,7 @@ class ProjectController extends Controller
             "image" => "required|string",
             "title" => "required|string",
             "description" => "required|string",
-            "categori" => "required|string|in:web,mobile,logo,sosmed,illustration",
+            "category" => "required|string|in:web,mobile,logo,sosmed,illustration",
             "date" => "required|date",
             "price" => "required|numeric|min:0",
             "duration" => "required|string",
@@ -39,30 +40,24 @@ class ProjectController extends Controller
         if ($validator->fails()) {
             return response()->json(["errors" => $validator->errors()], 422);
         }
-        $data = $validator->validated();
-        $projects = new Project;
-        $projects->fill($data);
-        dd($projects);
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
-    // $projects->image = $data->image;
+        $data = Arr::add($validator->validated(), 'published_at', today()->toString());
+        $project = Project::create($data);
+        return response()->json(["data" => $project], 201);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show($id)
     {
-    //
+        $result = Project::find($id);
+        if (!$result) {
+            return response()->json(["message" => "Not Found"], 404);
+        }
+        return response()->json(["data" => $result], 200);
     }
 
     /**
@@ -70,21 +65,49 @@ class ProjectController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, $id)
     {
-    //
+        $result = Project::find($id);
+        if (!$result) {
+            return response()->json(["message" => "Not Found"], 404);
+        }
+        $validator = validator($request->all(), [
+            "image" => "string",
+            "title" => "string",
+            "description" => "string",
+            "category" => "string|in:web,mobile,logo,sosmed,illustration",
+            "date" => "date",
+            "price" => "numeric|min:0",
+            "duration" => "string",
+            "client" => "string",
+            "designer" => "string",
+        ]);
+        if ($validator->fails()) {
+            return response()->json(["errors" => $validator->errors()], 422);
+        }
+        $result = Project::find($id);
+        if (!$result) {
+            return response()->json(["message" => "Not Found"], 404);
+        }
+        $result->update($validator->validated());
+        return response()->json(["data" => $result], 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-    //
+        $result = Project::find($id);
+        if (!$result) {
+            return response()->json(["message" => "Not Found"], 404);
+        }
+        $result->delete();
+        return response()->json(["data" => $result], 200);
     }
 }
