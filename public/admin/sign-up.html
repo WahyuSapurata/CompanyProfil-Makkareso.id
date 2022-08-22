@@ -34,7 +34,7 @@
         <title>Makkareso - Sign-Up</title>
 
         <script src="assets/js/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             let _token;
             $.ajax({
                 type: "GET", //THIS NEEDS TO BE GET
@@ -53,7 +53,7 @@
                     location.assign("/admin/index.html");
                 },
             });
-        </script>
+        </script> -->
     </head>
 
     <body class="bg-login">
@@ -234,15 +234,15 @@
         <script src="assets/js/app.js"></script>
         <script>
             $(document).ready(function () {
-                let _token;
-                $.ajax({
-                    type: "GET", //THIS NEEDS TO BE GET
-                    url: "/api/admins/key",
-                    success: function (data) {
-                        console.log(data);
-                        _token = data;
-                    },
-                });
+                // let _token;
+                // $.ajax({
+                //     type: "GET", //THIS NEEDS TO BE GET
+                //     url: "/api/admins/key",
+                //     success: function (data) {
+                //         console.log(data);
+                //         _token = data;
+                //     },
+                // });
 
                 $("#submit").click(function () {
                     for (const key of [
@@ -258,11 +258,12 @@
                     var email = $("#email").val();
                     var username = $("#username").val();
                     var password = $("#password").val();
+                    var role = "admin";
                     $.ajax({
                         type: "POST",
-                        url: "/api/admins/register",
+                        url: "/api/user/register",
                         data: {
-                            _token,
+                            role,
                             name,
                             email,
                             username,
@@ -281,6 +282,7 @@
                             }
                         },
                         success: function (response) {
+                            sessionStorage.setItem("key", response.token);
                             location.assign("/admin/index.html");
                         },
                     });

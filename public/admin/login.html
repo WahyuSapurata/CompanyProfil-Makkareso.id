@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css" />
         <title>Makkareso - Login</title>
         <script src="assets/js/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             let _token;
             $.ajax({
                 type: "GET", //THIS NEEDS TO BE GET
@@ -41,7 +41,7 @@
                     location.assign("/admin/index.html");
                 },
             });
-        </script>
+        </script> -->
     </head>
 
     <body class="bg-lock-screen">
@@ -328,15 +328,15 @@
         </script>
         <script>
             $(document).ready(function () {
-                let _token;
-                $.ajax({
-                    type: "GET", //THIS NEEDS TO BE GET
-                    url: "/api/admins/key",
-                    success: function (data) {
-                        console.log(data);
-                        _token = data;
-                    },
-                });
+                // let _token;
+                // $.ajax({
+                //     type: "GET", //THIS NEEDS TO BE GET
+                //     url: "/api/admins/key",
+                //     success: function (data) {
+                //         console.log(data);
+                //         _token = data;
+                //     },
+                // });
 
                 $("#submit").click(function (e) {
                     e.preventDefault();
@@ -344,9 +344,8 @@
                     var password = $("#password").val();
                     $.ajax({
                         type: "POST",
-                        url: "/api/admins/login",
+                        url: "/api/user/login",
                         data: {
-                            _token,
                             username,
                             password,
                         },
@@ -378,6 +377,7 @@
                             }
                         },
                         success: function (response) {
+                            sessionStorage.setItem("key", response.token);
                             location.assign("/admin/index.html");
                         },
                     });

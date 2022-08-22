@@ -88,9 +88,7 @@
                     <li>
                         <a href="index.html">
                             <div class="parent-icon">
-                                <i
-                                    class="bx bxs-home bx-tada bx-flip-vertical"
-                                ></i>
+                                <i class="bx bxs-home"></i>
                             </div>
                             <div class="menu-title">Dashboard</div>
                         </a>
@@ -98,7 +96,7 @@
                     <li class="active">
                         <a href="role.html">
                             <div class="parent-icon">
-                                <i class="bx bxs-user-account bx-tada"></i>
+                                <i class="bx bxs-user-account"></i>
                             </div>
                             <div class="menu-title">Role</div>
                         </a>
@@ -106,14 +104,22 @@
                     <li>
                         <a href="projects.html">
                             <div class="parent-icon">
-                                <i
-                                    class="bx bxs-briefcase bx-tada bx-rotate-180"
-                                ></i>
+                                <i class="bx bxs-briefcase"></i>
                             </div>
                             <div class="menu-title">Project</div>
                         </a>
                     </li>
                 </ul>
+                <script>
+                    $("a").hover(
+                        function () {
+                            $(this).addClass("bx-tada");
+                        },
+                        function () {
+                            $(this).removeClass("bx-tada");
+                        }
+                    );
+                </script>
                 <!--end navigation-->
             </div>
             <!--end sidebar wrapper -->

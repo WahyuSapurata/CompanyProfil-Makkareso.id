@@ -49,7 +49,7 @@
         <link rel="stylesheet" href="assets/css/header-colors.css" />
         <title>Makkareso - Admin</title>
         <script src="assets/js/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             let _token;
             $.ajax({
                 type: "GET", //THIS NEEDS TO BE GET
@@ -68,7 +68,7 @@
                     console.log(response);
                 },
             });
-        </script>
+        </script> -->
     </head>
 
     <body>
@@ -96,9 +96,7 @@
                     <li>
                         <a href="index.html">
                             <div class="parent-icon">
-                                <i
-                                    class="bx bxs-home bx-tada bx-flip-vertical"
-                                ></i>
+                                <i class="bx bxs-home"></i>
                             </div>
                             <div class="menu-title">Dashboard</div>
                         </a>
@@ -106,7 +104,7 @@
                     <li>
                         <a href="role.html">
                             <div class="parent-icon">
-                                <i class="bx bxs-user-account bx-tada"></i>
+                                <i class="bx bxs-user-account"></i>
                             </div>
                             <div class="menu-title">Role</div>
                         </a>
@@ -114,14 +112,22 @@
                     <li class="active">
                         <a href="projects.html">
                             <div class="parent-icon">
-                                <i
-                                    class="bx bxs-briefcase bx-tada bx-rotate-180"
-                                ></i>
+                                <i class="bx bxs-briefcase"></i>
                             </div>
                             <div class="menu-title">Project</div>
                         </a>
                     </li>
                 </ul>
+                <script>
+                    $("a").hover(
+                        function () {
+                            $(this).addClass("bx-tada");
+                        },
+                        function () {
+                            $(this).removeClass("bx-tada");
+                        }
+                    );
+                </script>
                 <!--end navigation-->
             </div>
             <!--end sidebar wrapper -->
@@ -1402,30 +1408,31 @@
         </script>
         <script>
             $(document).ready(function () {
-                let _token;
+                var key = sessionStorage.getItem("key");
+                // let _token;
+                // $.ajax({
+                //     type: "GET", //THIS NEEDS TO BE GET
+                //     url: "/api/admins/key",
+                //     success: function (data) {
+                //         console.log(data);
+                //         _token = data;
                 $.ajax({
-                    type: "GET", //THIS NEEDS TO BE GET
-                    url: "/api/admins/key",
-                    success: function (data) {
-                        console.log(data);
-                        _token = data;
-                        $.ajax({
-                            type: "POST",
-                            url: "/api/admins/auth",
-                            data: { _token },
-                            dataType: "JSON",
-                            success: function (response) {
-                                console.log(response);
-                                $("#name").text(response.data.name);
-                            },
-                        });
+                    type: "GET",
+                    url: "/api/user/auth",
+                    headers: { Authorization: `Bearer ${key}` },
+                    dataType: "JSON",
+                    success: function (response) {
+                        console.log(response);
+                        $("#name").text(response.data.name);
                     },
                 });
+                //     },
+                // });
                 $("#logout").click(function () {
                     $.ajax({
-                        type: "POST",
-                        url: "/api/admins/logout",
-                        data: { _token },
+                        type: "GET",
+                        url: "/api/user/logout",
+                        headers: { Authorization: `Bearer ${key}` },
                         dataType: "JSON",
                         success: function (response) {
                             location.assign("/admin/login.html");
