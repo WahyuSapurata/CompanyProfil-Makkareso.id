@@ -24,6 +24,6 @@ Route::controller(UserController::class)->name('user')->prefix('user')->group(fu
 Route::apiResource('projects', ProjectController::class);
 Route::controller(StorageController::class)->name('storage')->prefix('storage')->group(function () {
     Route::get('/local/{path}', 'local_download')->where('path', '.*');
-    Route::put('/local', 'local_upload');
+    Route::post('/local', 'local_upload');
     Route::delete('/local/{path}', 'local_remove')->where('path', '.*');
 });

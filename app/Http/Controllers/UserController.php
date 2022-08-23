@@ -37,7 +37,7 @@ class UserController extends Controller
         $data = $validator->validated();
         $user = User::create($data);
         $token = $user->createToken($user->username);
-        info("[user:register] { username: $user->username }");
+        info("[user:register] { username: $user->username }", $user->toArray());
         return response()->json([
             "data" => $user,
             "token" => $token->plainTextToken,
@@ -75,6 +75,7 @@ class UserController extends Controller
         if (!is_null($user)) {
             if ($data['password'] == $user->password) {
                 $token = $user->createToken($user->username);
+                info("[user:login] { username: $user->username }", $user->toArray());
                 return response()->json([
                     "data" => $user,
                     "token" => $token->plainTextToken,
