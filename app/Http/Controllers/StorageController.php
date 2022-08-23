@@ -42,8 +42,7 @@ class StorageController extends Controller
         $ext = $file->extension();
         if (!!$data['public']) {
             $result = $file->storePubliclyAs("public/{$data['dir']}", "{$data['name']}.$ext");
-        }
-        else {
+        } else {
             $result = $file->storeAs($data['dir'], "{$data['name']}.$ext");
         }
         $path = "/storage/$result";

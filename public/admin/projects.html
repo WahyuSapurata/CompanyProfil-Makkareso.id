@@ -49,26 +49,21 @@
         <link rel="stylesheet" href="assets/css/header-colors.css" />
         <title>Makkareso - Admin</title>
         <script src="assets/js/jquery.min.js"></script>
-        <!-- <script>
-            let _token;
+        <script>
+            var key = sessionStorage.getItem("key");
             $.ajax({
-                type: "GET", //THIS NEEDS TO BE GET
-                url: "/api/admins/key",
-                success: function (data) {
-                    console.log(data);
-                    _token = data;
-                },
-            });
-            $.ajax({
-                type: "POST",
-                url: "/api/admins/auth",
-                data: { _token },
+                type: "GET",
+                url: "/api/user/auth",
+                headers: { Authorization: `Bearer ${key}` },
                 dataType: "JSON",
-                success: function (response) {
+                error: function (response) {
                     console.log(response);
+                    if (response.status == 401) {
+                        location.assign("/admin/login.html");
+                    }
                 },
             });
-        </script> -->
+        </script>
     </head>
 
     <body>
@@ -918,9 +913,7 @@
                                 />
                                 <div class="user-info ps-3">
                                     <p class="user-name mb-0" id="name"></p>
-                                    <p class="designattion mb-0">
-                                        Web Designer
-                                    </p>
+                                    <p class="designattion mb-0" id="role"></p>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -1424,6 +1417,7 @@
                     success: function (response) {
                         console.log(response);
                         $("#name").text(response.data.name);
+                        $("#role").text(response.data.role);
                     },
                 });
                 //     },
