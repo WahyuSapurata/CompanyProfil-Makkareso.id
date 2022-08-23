@@ -25,7 +25,9 @@ class RoleSeeder extends Seeder
         [
             'name' => 'admin',
             'model' => 'admins',
-            'permission' => '',
+            'permission' => [
+                "users:create", "users:read", "users:update", "users:delete",
+            ],
         ]);
     }
 }
