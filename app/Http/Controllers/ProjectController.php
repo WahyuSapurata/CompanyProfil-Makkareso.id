@@ -110,4 +110,17 @@ class ProjectController extends Controller
         $result->delete();
         return response()->json(["data" => $result], 200);
     }
+
+    public function detail($id)
+    {
+        $project = Project::find($id);
+        if (!$project) {
+            return abort(404);
+        }
+        $related = Project::where([
+            ['id', '!=', $project->id],
+            ['category', '=', $project->category],
+        ])->limit(5)->get();
+        return view('projects.detail', ['project' => $project, 'related' => $related]);
+    }
 }

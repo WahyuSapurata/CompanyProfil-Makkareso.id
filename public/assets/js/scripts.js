@@ -499,9 +499,8 @@ We may release future updates so it will overwrite this file. it's better and sa
   document.addEventListener("DOMContentLoaded", init_projects);
   async function init_projects() {
     try {
-      await idle();
-      const res = await fetch("/assets/data/projects.v2.json");
-      const data = await res.json();
+      const res = await fetch("/api/projects");
+      const { data } = await res.json();
       const container = document.getElementById("project-container");
       const pagination = pagenation_init(6, data.length);
       const pagination_all = pagenation_init(data.length, data.length);
@@ -554,7 +553,7 @@ We may release future updates so it will overwrite this file. it's better and sa
         wait(100)
           .then(() => {
             $grid.isotope("insert", list);
-            return wait(100);
+            return wait(300);
           })
           .then(() => {
             $grid.isotope("layout");
@@ -568,7 +567,7 @@ We may release future updates so it will overwrite this file. it's better and sa
         wait(100)
           .then(() => {
             $grid.isotope("insert", list);
-            return wait(100);
+            return wait(300);
           })
           .then(() => {
             $grid.isotope("layout");
@@ -585,19 +584,19 @@ We may release future updates so it will overwrite this file. it's better and sa
   }
   function render_project(value) {
     const div = document.createElement("div");
-    div.className = `col-md-4 bizagn--filter-item ${value.cat}`;
+    div.className = `col-md-4 bizagn--filter-item ${value.category}`;
     div.innerHTML = `
                 <div class="d-flex justify-content-center">
                   <div class="d-inline-block position-relative">
                     <img
-                      src="${value.src}"
+                      src="${value.image}"
                       alt=""
                       class="img-project thumb"
                     />
                     <div class="bizagn--filter-item-data">
                       <h4><a href="project-details.html"> Project ${value.id} </a></h4>
-                      <p>${value.auth}</p>
-                      <a href="project-details.html"
+                      <p>${value.designer}</p>
+                      <a href="projects/${value.id}"
                         ><img
                           src="/assets/images/project/arrow.svg"
                           alt=""
