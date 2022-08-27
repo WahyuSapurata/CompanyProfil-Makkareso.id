@@ -42,22 +42,17 @@
         <title>Makkareso - Admin</title>
         <script src="assets/js/jquery.min.js"></script>
         <script>
-            let _token;
+            var key = sessionStorage.getItem("key");
             $.ajax({
-                type: "GET", //THIS NEEDS TO BE GET
-                url: "/api/admins/key",
-                success: function (data) {
-                    console.log(data);
-                    _token = data;
-                },
-            });
-            $.ajax({
-                type: "POST",
-                url: "/api/admins/auth",
-                data: { _token },
+                type: "GET",
+                url: "/api/user/auth",
+                headers: { Authorization: `Bearer ${key}` },
                 dataType: "JSON",
-                success: function (response) {
+                error: function (response) {
                     console.log(response);
+                    if (response.status == 401) {
+                        location.assign("/admin/login.html");
+                    }
                 },
             });
         </script>

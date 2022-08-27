@@ -39,26 +39,21 @@
         <!-- SweetAlert2 -->
         <link rel="stylesheet" href="assets/sweetalert2/sweetalert2.min.css" />
         <script src="assets/js/jquery.min.js"></script>
-        <!-- <script>
-            let _token;
+        <script>
+            var key = sessionStorage.getItem("key");
             $.ajax({
-                type: "GET", //THIS NEEDS TO BE GET
-                url: "/api/admins/key",
-                success: function (data) {
-                    console.log(data);
-                    _token = data;
-                },
-            });
-            $.ajax({
-                type: "POST",
-                url: "/api/admins/auth",
-                data: { _token },
+                type: "GET",
+                url: "/api/user/auth",
+                headers: { Authorization: `Bearer ${key}` },
                 dataType: "JSON",
-                success: function (response) {
+                error: function (response) {
                     console.log(response);
+                    if (response.status == 401) {
+                        location.assign("/admin/login.html");
+                    }
                 },
             });
-        </script> -->
+        </script>
     </head>
 
     <body>
@@ -908,9 +903,7 @@
                                 />
                                 <div class="user-info ps-3">
                                     <p class="user-name mb-0" id="name"></p>
-                                    <p class="designattion mb-0">
-                                        Web Designer
-                                    </p>
+                                    <p class="designattion mb-0" id="role"></p>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -987,7 +980,7 @@
                                                                 onchange="gambar(this.files[0], '#foto')" /></i
                                                     ></label>
                                                     <img
-                                                        src="assets/images/avatars/avatar-2.png"
+                                                        src="/assets/images/avatar.svg"
                                                         alt="Admin"
                                                         id="foto"
                                                         class="rounded-circle p-1 bg-primary"
@@ -999,9 +992,8 @@
                                                     <h4 id="name"></h4>
                                                     <p
                                                         class="text-secondary mb-1"
-                                                    >
-                                                        Full Stack Developer
-                                                    </p>
+                                                        id="role"
+                                                    ></p>
                                                     <button
                                                         class="btn btn-primary"
                                                     >
@@ -1312,9 +1304,11 @@
                 //         _token = data;
                 var key = sessionStorage.getItem("key");
                 var name = document.querySelectorAll("#name");
+                var role = document.querySelectorAll("#role");
                 let id;
                 let em;
                 let ph;
+                let usr;
                 $.ajax({
                     type: "GET",
                     url: "/api/user/auth",
@@ -1326,42 +1320,74 @@
                         name.forEach((e) => {
                             e.textContent = response.data.name;
                         });
-
+                        role.forEach((e) => {
+                            e.textContent = response.data.role;
+                        });
                         $("input#name").val(response.data.name);
                         em = $("#email").val(response.data.email);
                         ph = $("#phone").val(response.data.phone);
+                        usr = response.data.username;
                         $("#username")
                             .val(response.data.username)
                             .attr("disabled", true)
                             .addClass("text-muted");
+                        $("#foto").attr("src", response.data.image);
                     },
                 });
                 //     },
                 // });
+
                 $("#submit").click(function () {
-                    var name = $("input#name").val();
-                    var email =
-                        $("#email").val() == em ? $("#email").val() : undefined;
-                    var phone =
-                        $("#phone").val() == ph ? $("#phone").val() : undefined;
+                    var fd = new FormData();
+                    var files = $("#file")[0].files;
+                    // var username = usr;
+                    console.log(files);
+                    var dir = "user";
+                    var public = true;
+                    fd.append("file", files[0]);
+                    fd.append("name", usr);
+                    fd.append("dir", dir);
+                    fd.append("public", public);
                     $.ajax({
-                        type: "PATCH",
-                        url: `/api/user/update/${id}`,
+                        type: "POST",
+                        url: "/api/storage/local",
                         headers: { Authorization: `Bearer ${key}` },
-                        data: { name, email, phone },
-                        dataType: "JSON",
+                        data: fd,
+                        contentType: false,
+                        processData: false,
                         success: function (response) {
                             console.log(response);
-                            $("input#name").val(response.data.name);
-                            $("input#email").val(response.data.email);
-                            $("input#phone").val(response.data.phone);
-                            Swal.fire({
-                                position: "center",
-                                icon: "success",
-                                title: "Wow",
-                                text: "Kamu Hebat🤙",
-                                showConfirmButton: false,
-                                timer: 3000,
+                            image = response.data;
+                            var name = $("input#name").val();
+                            var email =
+                                $("#email").val() == em
+                                    ? $("#email").val()
+                                    : undefined;
+                            var phone =
+                                $("#phone").val() == ph
+                                    ? $("#phone").val()
+                                    : undefined;
+                            $.ajax({
+                                type: "PATCH",
+                                url: `/api/user/update/${id}`,
+                                headers: { Authorization: `Bearer ${key}` },
+                                data: { name, email, phone, image },
+                                dataType: "JSON",
+                                success: function (response) {
+                                    console.log(response);
+                                    $("input#name").val(response.data.name);
+                                    $("input#email").val(response.data.email);
+                                    $("input#phone").val(response.data.phone);
+                                    // $(".img-plus img").show();
+                                    Swal.fire({
+                                        position: "center",
+                                        icon: "success",
+                                        title: "Wow",
+                                        text: "Kamu Hebat🤙",
+                                        showConfirmButton: false,
+                                        timer: 3000,
+                                    });
+                                },
                             });
                         },
                     });

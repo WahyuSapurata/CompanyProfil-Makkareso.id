@@ -13,13 +13,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::controller(UserController::class)->name('user')->prefix('user')->group(function () {
-    Route::post("/register", 'register');
-    Route::get("/auth", "auth")->middleware('auth:sanctum');
-    Route::post("/login", "login");
-    Route::get("/logout", "logout")->middleware('auth:sanctum');
-    Route::patch("/update/{id}", "update")->whereNumber('id')->middleware('auth:sanctum');
-}
+Route::controller(UserController::class)->name('user')->prefix('user')->group(
+    function () {
+        Route::post("/register", 'register');
+        Route::get("/auth", "auth")->middleware('auth:sanctum');
+        Route::post("/login", "login");
+        Route::get("/logout", "logout")->middleware('auth:sanctum');
+        Route::patch("/update/{id}", "update")->whereNumber('id')->middleware('auth:sanctum');
+    }
 );
 Route::apiResource('projects', ProjectController::class);
 Route::controller(StorageController::class)->name('storage')->prefix('storage')->group(function () {
