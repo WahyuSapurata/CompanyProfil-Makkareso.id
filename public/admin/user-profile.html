@@ -1331,10 +1331,7 @@
                             .val(response.data.username)
                             .attr("disabled", true)
                             .addClass("text-muted");
-                        $("#foto").attr(
-                            "src",
-                            response.data.image.replace("/public", "")
-                        );
+                        $("#foto").attr("src", response.data.image);
                     },
                 });
                 //     },

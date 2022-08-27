@@ -1,3 +1,6 @@
+.imageuploadify.is-invalid {
+    border: 2px dashed #ff0000;
+}
 .imageuploadify {
     border: 2px dashed #d2d2d2;
     position: relative;
